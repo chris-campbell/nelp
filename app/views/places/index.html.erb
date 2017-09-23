@@ -1,4 +1,4 @@
-<h2>Happy</h2>
+
 <% @places.each do |place| %>
   <div class='booyah-box col-10 offset-1'>
     <h1><%= place.name %></h1><br>
@@ -6,5 +6,5 @@
     <p><%= place.description %></p><br>
   </div>
 <% end %>
-
+ 
 <%= will_paginate @places %>
