@@ -1,10 +1,50 @@
-
-<div class='booyah-box col-10 offset-1'>
+<div class="booyah-box col-10 offset-1">
   <h1><%= @place.name %></h1>
-  
   <i><%= @place.address %></i>
   <br/><br/>
   <p><%= @place.description %></p>
+
+
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height: 300px;
+    }
+  </style>
+  </head>
+  <body>
+  <div id="map"></div>
+
+  <script>
+<% if @place.latitude.present? && @place.longitude.present? %>
+    function initMap() {
+      var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: myLatLng
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+      });
+    }
+  </script>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUFf4GXS66uhKjO30WnbPocxa-CgsEjfg&callback=initMap">
+  </script>
+
+<% end %>
+
+
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
