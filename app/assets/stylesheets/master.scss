@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "font-awesome";
+
 * {
   font-family: 'Muli', sans-serif;
 }
@@ -45,6 +46,19 @@ body {
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+  height: 550px;
+}
+
+.booyah-box-header {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
 }
 
 .help-block {
@@ -52,4 +66,9 @@ body {
   background-color: #FFEEEE;
   border-radius: 3px;
   padding: 2px 8px 2px 8px;
+}
+
+.btn {
+  position: relative;
+  top: 24px;
 }
