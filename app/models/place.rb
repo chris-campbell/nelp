@@ -1,6 +1,7 @@
 class Place < ApplicationRecord
     belongs_to :user
     has_many :comments
+    has_many :photos
     
     # Google maps API
     geocoded_by :address

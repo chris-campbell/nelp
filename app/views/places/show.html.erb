@@ -18,30 +18,29 @@
   <body>
   <div id="map"></div>
 
-  <script>
-<% if @place.latitude.present? && @place.longitude.present? %>
-    function initMap() {
-      var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+<script>
+  <% if @place.latitude.present? && @place.longitude.present? %>
+      function initMap() {
+        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+  
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: myLatLng
+        });
+  
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+</script>
 
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
-        center: myLatLng
-      });
-
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: 'Hello World!'
-      });
-    }
-  </script>
-
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUFf4GXS66uhKjO30WnbPocxa-CgsEjfg&callback=initMap">
-  </script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUFf4GXS66uhKjO30WnbPocxa-CgsEjfg&callback=initMap">
+</script>
 
 <% end %>
-
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
@@ -51,34 +50,51 @@
   </div>
 </div>
 
+<div class='booyah-box-header col-10 offset-1'>
+<% @place.photos.each do |photo| %>
+  <ul>
+    <li>
+      <%= image_tag photo.picture %>
+      <%= photo.caption %>
+    </li>
+  </ul>
+<% end %>
 
+  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+    <%= f.input :caption %>
+    <%= f.input :picture %>
+    <%= f.submit "Add photo", class: 'btn btn-primary' %>
+  <% end %>
+</div>
 
 <div class='clear'></div>
 
-<div class="col-10 offset-1">
+<div class="booyah-box-header col-10 offset-1">
   <h1 class="float-left">Comments</h1>
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
     Add a comment
   </button>
-</div>
+
 <div class='clear'></div>
 
-<div class='row'>
-  <% @place.comments.each do |comment| %>
-    <div class="col-10 col-sm-6 offset-1" %>
-      <div>
-        <blockquote>
-          <% if comment.humanized_rating.present? %>
-            <b><%= comment.humanized_rating %></b> -
-          <% end %>
-          <%= comment.message %>
-          <small><%= comment.user.email %></small>
-        </blockquote>
+  <div class='row'>
+    <% @place.comments.each do |comment| %>
+      <div class="col-10 col-sm-6 offset-1" %>
+        <div>
+          <blockquote>
+            <% if comment.humanized_rating.present? %>
+              <b><%= comment.humanized_rating %></b> -
+            <% end %>
+            <%= comment.message %>
+            <small><%= comment.user.email %></small>
+          </blockquote>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

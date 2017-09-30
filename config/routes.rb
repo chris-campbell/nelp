@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'photos/create'
+
   devise_for :users
   root 'places#index'
   resources :places do
-    resources :comments, only: :create
+    resources :comments, :photos, only: :create
   end
 end
