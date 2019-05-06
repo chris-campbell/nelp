@@ -152,6 +152,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (12.1.0)
+    ratyrate (1.2.2.alpha)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -226,6 +227,7 @@ DEPENDENCIES
   popper_js (~> 1.11.1)
   puma (~> 3.0)
   rails (~> 5.0.6)
+  ratyrate
   sass-rails (~> 5.0)
   simple_form
   spring
@@ -238,4 +240,4 @@ DEPENDENCIES
   will_paginate (>= 3.1)
 
 BUNDLED WITH
-   1.16.0.pre.2
+   2.0.1

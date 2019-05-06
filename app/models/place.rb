@@ -1,4 +1,6 @@
 class Place < ApplicationRecord
+    ratyrate_rateable 'visual_effects', 'original_score', 'director', 'custome_design'
+    
     belongs_to :user
     has_many :comments
     has_many :photos
@@ -10,5 +12,7 @@ class Place < ApplicationRecord
     # Core Validations for application
     validates :name, :address, :description, presence: true
     validates :name, :address, :description, length: { minimum: 3 }
+    
+    
     
 end

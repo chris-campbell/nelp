@@ -41,7 +41,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUFf4GXS66uhKjO30WnbPocxa
 </script>
 
 <% end %>
-
+<%= rating_for @place, "custome_design" %>
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
@@ -58,6 +58,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUFf4GXS66uhKjO30WnbPocxa
       <%= photo.caption %>
     </li>
   </ul>
+  
 <% end %>
 
   <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
