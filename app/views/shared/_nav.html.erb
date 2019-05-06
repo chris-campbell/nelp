@@ -1,15 +1,33 @@
-<nav class="main-nav">
-    <div>
-        <a href='logo'>Logo</a>
-        <div class='sessions'>
-            <% if user_signed_in? %>
-            <ul>
-                <li><%= link_to 'Logout', destroy_user_session_path %></li>
-            </ul>
-            <% else %>
-                <li><%= link_to 'Login', new_user_session_path %></li>
-                <li><%= link_to 'Sign up', new_user_registration_path %></li>
-            <% end %>
+<div class='bg'>
+    <nav class="main-nav">
+        <div>
+            <div class='write'>
+                <ul>
+                    <li><a class='review' href='#'>Write a Review</a></li>
+                    <li><a class='lucky' href='#'>Feeling Lucky</a></li>
+                </ul>
+            </div>
+            <div class='sessions'>
+                <ul>
+                    <% if user_signed_in? %>
+                        <li><%= link_to 'Logout', destroy_user_session_path %></li>
+                    <% else %>
+                        <li><%= link_to 'Sign up', new_user_registration_path, class: 'sign-up' %></li>
+                        <li><%= link_to 'Login', new_user_session_path %></li>
+                    <% end %>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+        <div class='search-form'>
+            <h1>Logo</h1>
+            <input type="text" name="firstname">
+            <div class='tag-items'>
+                <ul>
+                    <li>Dinner</li>
+                    <li>Activities</li>
+                    <li>Home Services</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

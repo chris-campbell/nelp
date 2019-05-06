@@ -1,4 +1,99 @@
 .main-nav{
-    background: red;
+    background: transparent;
     height: 60px;
+}
+
+.bg {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.47)), 
+    url('rock_climb');
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .sessions {
+        float: right;
+        .sign-up {
+            padding: 7px;
+            border: 1.5px solid orange;
+            border-radius: 5px;
+            color: orange;
+        }
+    }
+    .write {
+        float: left;
+    }
+}
+
+.sessions, .write {
+    width: 50%;
+    position: relative;
+    top: 20px;
+}
+
+.sessions ul li, .write ul li {
+    display: inline;
+    margin-left: 30px;
+}
+
+.sessions ul li {
+    float: right;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.sessions ul li a, .write ul li a {
+    color: #fff;
+}
+
+.write ul li .lucky {
+    color: orange;
+}
+
+.search-form {
+    width: 86%;
+    margin: 0 auto;
+    position: relative;
+    top: 250px;
+    h1 {
+        text-align: center;
+        margin: 0 auto;
+        width: 150px;
+        margin-bottom: 40px;
+        color: #fff;
+    }
+    input {
+        display: block;
+        text-align: center;
+        width: 81%;
+        height: 48px;
+        border-radius: 5px;
+        outline: none;
+        box-shadow: inset 0px 3px 1px -1px;
+        box-shadow: none !important;
+        margin: 0 auto;
+        border: none;
+    }
+}
+
+.tag-items {
+    margin: 0 auto;
+}
+
+.tag-items ul li {
+    display: inline;
+    margin: 0 auto;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.tag-items ul li {
+    font-size: 0.7em;
+}
+
+.tag-items ul {
+    width: 32%;
+    margin: 0 auto;
+    margin-top: 25px;
+    color: orange;
 }
