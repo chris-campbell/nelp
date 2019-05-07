@@ -51,7 +51,7 @@
 }
 
 .search-form {
-    width: 86%;
+    width: 50%;
     margin: 0 auto;
     position: relative;
     top: 250px;
@@ -65,7 +65,7 @@
     input {
         display: block;
         text-align: center;
-        width: 81%;
+        width: 100%;
         height: 48px;
         border-radius: 5px;
         outline: none;
@@ -74,6 +74,18 @@
         margin: 0 auto;
         border: none;
     }
+    ul {
+        padding: 0;
+        margin: 0 auto;
+        width: 69%;
+        margin-top: 20px;
+        li {
+            display: inline;
+            padding-left: 13%;
+            color: orange;
+        }
+    }
+    
 }
 
 .tag-items {
@@ -96,4 +108,5 @@
     margin: 0 auto;
     margin-top: 25px;
     color: orange;
+    padding: 0;
 }
