@@ -43,7 +43,11 @@
                 <% @places.each do |place| %>
                         <div class='text-center col-md-4'>
                             <article class='place-card mr-1'>
-                                <%= image_tag(place.photos[0].picture, class: 'place_image') %>
+                                <% if place.photos.any? %>
+                                    <%= image_tag(place.photos[0].picture, class: 'place_image') %>
+                                <% else %>
+                                    <%= image_tag('placeholder.png') %>
+                                <% end %>
                                 
                                 <h4><%= link_to place.name, place_path(place) %></h4>
                                 <p>
