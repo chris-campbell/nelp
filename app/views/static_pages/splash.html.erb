@@ -1,0 +1,59 @@
+<section class="bg">
+    <div class='action-content'>
+        <h1>Find Adventure</h1>
+        <p>
+            Bacon ipsum dolor amet brisket sausage tail ham hock,
+            filet mignon rump shankle sirloin beef ribs kielbasa. 
+            Filet mignon beef ribs landjaeger drumstick. Drumstick
+            picanha tail kielbasa. Short ribs ham bresaola pork loin capicola.
+        </p>
+        <div class='action-btn'>
+            <button>Sign up</button>
+            <button class='learn-more'>Learn more</button>
+        </div>
+    </div>
+</section>
+
+<div class='relevance'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-4'></div>
+            <div class='col-md-4'>
+                <select class="form-control" id="sel1">
+                    <option>Latest</option>
+                    <option>Oldest</option>
+                    <option>Popular</option>
+                    <option>Relevant</option>
+                </select>
+                <p>136 Places Found.</p>
+            </div>
+
+               
+
+        </div>
+        
+    </div>
+    
+</div>
+
+<section class="places container">
+    <div class='row'>
+        <div class='container'>
+            <div class='row'>
+                <% @places.each do |place| %>
+                        <div class='text-center col-md-4'>
+                            <article class='place-item mr-1'>
+                                <%= image_tag(place.photos[0].picture, class: 'place_image') %>
+                                
+                                <h4><%= link_to place.name, place_path(place) %></h4>
+                                <p>
+                                    <%= truncate(place.description, length: 91) %>
+                                </p>
+                                <%= rating_for place, "custome_design" %>
+                            </article>
+                        </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</section>

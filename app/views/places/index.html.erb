@@ -1,18 +1,2 @@
-<% @places.each do |place| %>
-  <div class='booyah-box-header col-10 offset-1'>
-    <h1><%= link_to place.name, place_path(place) %></h1><br>
-    <i><%= place.address %></i><br>
-    <p><%= place.description %></p><br>
-    
-    <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-    <% end %>
-    
-    <%= rating_for place, "custome_design" %>
-    
-  </div>
-  
-  
-<% end %>
- 
-<%= will_paginate @places %>
+
+<!--<%= will_paginate @places %>-->

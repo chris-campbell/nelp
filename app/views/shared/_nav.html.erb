@@ -1,33 +1,5 @@
-<div class='bg'>
-    <nav class="main-nav">
-        <div>
-            <div class='write'>
-                <ul>
-                    <li><a class='review' href='#'>Write a Review</a></li>
-                    <li><a class='lucky' href='#'>Feeling Lucky</a></li>
-                </ul>
-            </div>
-            <div class='sessions'>
-                <ul>
-                    <% if user_signed_in? %>
-                        <li><%= link_to 'Logout', destroy_user_session_path %></li>
-                    <% else %>
-                        <li><%= link_to 'Sign up', new_user_registration_path, class: 'sign-up' %></li>
-                        <li><%= link_to 'Login', new_user_session_path %></li>
-                    <% end %>
-                </ul>
-            </div>
-        </div>
-        <div class='search-form'>
-            <h1><b>Logo</b></h1>
-            <input type="text" name="firstname">
-    
-                <ul>
-                    <li>Dinner</li>
-                    <li>Activities</li>
-                    <li>Home Services</li>
-                </ul>
-          
-        </div>
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Nelp</a>
     </nav>
-</div>
+</header>

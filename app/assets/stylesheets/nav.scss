@@ -1,112 +1,53 @@
-.main-nav{
+header {
+    // width: 90%;
+    //  padding-top: 20px;
+    background: #5a4390;
+    height: 30px;
+}
+
+.navbar {
     background: transparent;
-    height: 60px;
 }
 
-.bg {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.47)), 
-    asset-url('rock_climb.jpg');
-    height: 100vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    .sessions {
-        float: right;
-        .sign-up {
-            padding: 7px;
-            border: 1.5px solid orange;
-            border-radius: 5px;
-            color: orange;
-        }
-    }
-    .write {
-        float: left;
-    }
-}
+// .bg {
+//     background-image: url(hero.png);
+//     height: 63vh;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: 100%;
+//     width: 100%;
+//     // margin-top: 54px;
+//     .action-content {
+//         width: 30%;
+//         position: relative;
+//         top: 41px;
+//         left: 10%;
+//         min-width: 334px;
+//     }
+//     h1 {
+//         font-family: 'Archivo Black', sans-serif;
+//         font-size: 76px;
+//         color: #fdcb6e;
+//         margin-bottom: 10px;
+//     }
+//     p {
+//         color: #fdcb6e;
+//         margin-bottom: 20px;
+//     }
+// }
 
-.sessions, .write {
-    width: 50%;
-    position: relative;
-    top: 20px;
-}
 
-.sessions ul li, .write ul li {
-    display: inline;
-    margin-left: 30px;
-}
-
-.sessions ul li {
-    float: right;
-    margin-left: 20px;
-    margin-right: 30px;
-}
-
-.sessions ul li a, .write ul li a {
-    color: #fff;
-}
-
-.write ul li .lucky {
-    color: orange;
-}
-
-.search-form {
-    width: 50%;
-    margin: 0 auto;
-    position: relative;
-    top: 250px;
-    h1 {
-        text-align: center;
-        margin: 0 auto;
-        width: 150px;
-        margin-bottom: 40px;
-        color: #fff;
-    }
-    input {
-        display: block;
-        text-align: center;
-        width: 100%;
-        height: 48px;
-        border-radius: 5px;
-        outline: none;
-        box-shadow: inset 0px 3px 1px -1px;
-        box-shadow: none !important;
-        margin: 0 auto;
-        border: none;
-    }
-    ul {
-        padding: 0;
-        margin: 0 auto;
-        width: 69%;
-        margin-top: 20px;
-        li {
-            display: inline;
-            padding-left: 13%;
-            color: orange;
-        }
-    }
-    
-}
-
-.tag-items {
-    margin: 0 auto;
-}
-
-.tag-items ul li {
-    display: inline;
-    margin: 0 auto;
-    margin-right: 5%;
-    text-align: center;
-}
-
-.tag-items ul li {
-    font-size: 0.7em;
-}
-
-.tag-items ul {
-    width: 32%;
-    margin: 0 auto;
-    margin-top: 25px;
-    color: orange;
-    padding: 0;
-}
+// button {
+//     display: inline-block;
+//     padding: 0.35em 1.2em;
+//     border: 0.1em solid #FFFFFF;
+//     margin: 0 0.3em 0.3em 0;
+//     border-radius: 0.12em;
+//     box-sizing: border-box;
+//     text-decoration: none;
+//     font-family:'Roboto',sans-serif;
+//     font-weight: 900;
+//     color: #cc6869;
+//     text-align: center;
+//     transition: all 0.2s;
+// }
