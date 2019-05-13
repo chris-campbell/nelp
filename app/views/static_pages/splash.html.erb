@@ -1,4 +1,5 @@
-<section class="bg">
+<!-- Hero section -->
+<section class="hero">
     <div class='action-content'>
         <h1>Find Adventure</h1>
         <p>
@@ -13,8 +14,10 @@
         </div>
     </div>
 </section>
+<!-- Hero section -->
 
-<div class='relevance'>
+<!-- Relevance section -->
+<section class='relevance'>
     <div class='container'>
         <div class='row'>
             <div class='col-md-4'></div>
@@ -27,22 +30,19 @@
                 </select>
                 <p>136 Places Found.</p>
             </div>
-
-               
-
         </div>
-        
     </div>
-    
-</div>
+</section>
+<!-- Relevance section -->
 
+<!-- Places section -->
 <section class="places container">
     <div class='row'>
         <div class='container'>
             <div class='row'>
                 <% @places.each do |place| %>
                         <div class='text-center col-md-4'>
-                            <article class='place-item mr-1'>
+                            <article class='place-card mr-1'>
                                 <%= image_tag(place.photos[0].picture, class: 'place_image') %>
                                 
                                 <h4><%= link_to place.name, place_path(place) %></h4>
@@ -57,3 +57,4 @@
         </div>
     </div>
 </section>
+<!-- Places section -->
