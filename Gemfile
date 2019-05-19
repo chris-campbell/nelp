@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.6'
 # Use postgresql as the database for Active Record
@@ -27,22 +26,27 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
- # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Easily position tooltips. Read more: https://popper.js.org/?ref=heydesigner
 gem 'popper_js', '~> 1.11.1'
+# Add bootstrap functionality
 gem 'bootstrap', '4.0.0.alpha6'
+# Add pageination functionality. Read more: https://github.com/mislav/will_paginate
 gem 'will_paginate', '>= 3.1'
+# Simplify Rails form. Read more: https://github.com/plataformatec/simple_form
 gem 'simple_form'
+# Provides rails access to font-awesome web fonts. Read more: https://github.com/bokmann/font-awesome-rails
 gem "font-awesome-rails"
+# Devise is a flexible authentication solution for Rails based on Warde
 gem 'devise'
+# Forward and reverse geocoding, and IP address geocoding
 gem 'geocoder'
+# Configuration values often include sensitive information.
 gem "figaro"
+# Simple and extremely flexible way to upload files from Ruby applications
 gem 'carrierwave', '~> 1.0'
+# Configure fog upload for AWS
 gem "fog-aws"
+# Add star rating functionality to application. Read more: https://github.com/wazery/ratyrate
 gem 'ratyrate'
 
 group :development, :test do
