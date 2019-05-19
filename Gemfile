@@ -46,9 +46,10 @@ gem "figaro"
 gem 'carrierwave', '~> 1.0'
 # Configure fog upload for AWS
 gem "fog-aws"
-# Add star rating functionality to application. Read more: https://github.com/wazery/ratyrate
+# Add star rating functionality to application. Read more: 
 gem 'ratyrate'
 
+# Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -61,6 +62,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Brakeman is a static analysis tool which checks Ruby on Rails applications for security vulnerabilities
+  gem 'brakeman'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
