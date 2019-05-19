@@ -15,4 +15,12 @@ class Place < ApplicationRecord
     
     
     
+    def count(l)
+        
+        1.upto(l) do |n|
+            p n
+        end
+         
+    end
+    
 end

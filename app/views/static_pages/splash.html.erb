@@ -28,7 +28,9 @@
                     <option>Popular</option>
                     <option>Relevant</option>
                 </select>
-                <p>136 Places Found.</p>
+            </div>
+            <div class='place-count'>
+                <p><%= @places.length %> Places Found.</p>
             </div>
         </div>
     </div>
@@ -38,27 +40,39 @@
 <!-- Places section -->
 <section class="places container">
     <div class='row'>
-        <div class='container'>
-            <div class='row'>
-                <% @places.each do |place| %>
-                        <div class='text-center col-md-4'>
-                            <article class='place-card mr-1'>
-                                <% if place.photos.any? %>
-                                    <%= image_tag(place.photos[0].picture, class: 'place_image') %>
-                                <% else %>
-                                    <%= image_tag('placeholder.png') %>
-                                <% end %>
-                                
-                                <h4><%= link_to place.name, place_path(place) %></h4>
-                                <p>
-                                    <%= truncate(place.description, length: 91) %>
-                                </p>
-                                <%= rating_for place, "custome_design" %>
-                            </article>
-                        </div>
+        <section class='place-box col-md-8'>
+            <h2>Cool places in <span>Brooklyn</span></h2>
+            <%=
+            <% @places.each do |place| %>
+                    
+                        <article class='place-card'>
+                            <div class='hello'>
+                                <div class='photo-img'>
+                                    <% if place.photos.any? %>
+                                        <%= image_tag(place.photos[0].picture, class: 'photo') %>
+                                    <% else %>
+                                        <%= image_tag('placeholder.png', class: 'photo') %>
+                                    <% end %>
+                                </div>
+                            </div>
+                     
+                            <h4 class='title'> <%= link_to place.name, place_path(place) %></h4>
+
+                            <%= rating_for place, "custome_design"%>
+                            <p class='place-description'>
+                                <%= truncate(place.description, length: 256) %> <%= link_to 'Read more', place_path(place) %>
+                            </p>
+                        </article>
+                    
                 <% end %>
-            </div>
-        </div>
+                
+        </section>
+        <section class='recommendation col-md-4'>
+            <h2>Recommendation</h2>
+            <div class='box-1'></div>
+            <div class='box-2'></div>
+            <div class='box-3'></div>
+        </section>
     </div>
 </section>
 <!-- Places section -->
