@@ -43,7 +43,6 @@
         <section class='place-box col-md-8'>
             <h2>Cool places in <span>Brooklyn</span></h2>
             <% @placess.each do |place| %>
-                    
                         <article class='place-card'>
                             <div class='hello'>
                                 <div class='photo-img'>
@@ -62,9 +61,7 @@
                                 <%= truncate(place.description, length: 256) %> <%= link_to 'Read more', place_path(place) %>
                             </p>
                         </article>
-                    
                 <% end %>
-                
         </section>
         <section class='recommendation col-md-4'>
             <h2>Recommendation</h2>
@@ -76,5 +73,4 @@
 </section>
 <!-- Places section -->
 
-
-<!--<%= will_paginate @places %>-->
+<%= will_paginate @places %>

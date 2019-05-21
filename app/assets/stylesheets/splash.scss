@@ -4,8 +4,8 @@ $links: #525252;
 
 // Navbar effect transform
 .navbar.scrolled {
-  background-color: #2f2f2f !important;
-  transition: background-color 200ms linear;
+  background-color: #221626 !important;
+  transition: background-color 190ms linear;
 }
 
 // Hero section
@@ -169,4 +169,10 @@ $links: #525252;
     bottom: -3px;
     right: 5px;
 
+}
+
+
+.relevance {
+    background-color: #221626 !important;
+  transition: background-color 1000ms linear;
 }
