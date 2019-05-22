@@ -1,10 +1,15 @@
 header {
-    // width: 90%;
-    //  padding-top: 20px;
     background: #5a4390;
     height: 30px;
 }
 
 .navbar {
-    background: transparent;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    background: #292929;
+    .navbar-brand {
+        color: #fff;
+    }
 }

@@ -24,7 +24,7 @@ $links: #525252;
         min-width: 334px;
     }
     h1 {
-        // font-family: 'Archivo Black', sans-serif;
+        font-family: 'proxima-black';
         font-size: 76px;
         color: $base-yellow;
         margin-bottom: 10px;
@@ -32,7 +32,6 @@ $links: #525252;
     p {
         color: $base-yellow;
         margin-bottom: 20px;
-        // font-family: 'Judson', serif;
     }
 }
 
@@ -97,11 +96,15 @@ $links: #525252;
             display: inline;
             overflow: hidden;
             font-size: 15px;
-            
         }
         a {
             color: $links;
             text-decoration: none;
+        }
+        .star {
+            position: relative;
+            bottom: -3px;
+            right: 5px;
         }
     }
     .place-box {
@@ -163,17 +166,10 @@ $links: #525252;
     }
 }
 
-.star {
-    // display: inline;
-    position: relative;
-    bottom: -3px;
-    right: 5px;
-}
-
 .relevance {
     position: fixed;
     top: 0px;
     z-index: 1;
     width: 100%;
-    background: #292929;
+    background: #8387b9;
 }

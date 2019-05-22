@@ -16,33 +16,12 @@
 </section>
 <!-- Hero section -->
 
-<!-- Relevance section -->
-<!--<section class='relevance'>-->
-<!--    <div class='container'>-->
-<!--        <div class='row'>-->
-<!--            <div class='col-md-4'></div>-->
-<!--            <div class='col-md-4'>-->
-<!--                <select class="form-control" id="sel1">-->
-<!--                    <option>Latest</option>-->
-<!--                    <option>Oldest</option>-->
-<!--                    <option>Popular</option>-->
-<!--                    <option>Relevant</option>-->
-<!--                </select>-->
-<!--            </div>-->
-<!--            <div class='place-count'>-->
-<!--                <p><%= @places.length %> Places Found.</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!-- Relevance section -->
-
 <!-- Places section -->
 <section class="places container">
     <div class='row'>
         <section class='place-box col-md-8'>
             <h2>Cool places in <span>Brooklyn</span></h2>
-            <% @placess.each do |place| %>
+            <% @place_list.each do |place| %>
                         <article class='place-card'>
                             <div class='hello'>
                                 <div class='photo-img'>
@@ -53,8 +32,7 @@
                                     <% end %>
                                 </div>
                             </div>
-                     
-                            <h4 class='title'><%= place.count(@placess.length) %>. <%= link_to place.name, place_path(place) %></h4>
+                            <h4 class='title'><%= place.count(@place_list.length) %>. <%= link_to place.name, place_path(place) %></h4>
 
                             <%= rating_for place, "custome_design"%>
                             <p class='place-description'>
