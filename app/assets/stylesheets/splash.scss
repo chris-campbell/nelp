@@ -168,11 +168,12 @@ $links: #525252;
     position: relative;
     bottom: -3px;
     right: 5px;
-
 }
 
-
 .relevance {
-    background-color: #221626 !important;
-  transition: background-color 1000ms linear;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    background: #292929;
 }

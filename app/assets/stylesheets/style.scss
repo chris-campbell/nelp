@@ -1,19 +1,6 @@
-// @font-face {
-//     font-family: 'gilroy';
-//     src: url('/assets/Gilroy-Bold.ttf') format("truetype");
-//     src: url('/assets/Gilroy-Heavy.ttf') format("truetype");
-//     src: url('/assets/Gilroy-Light.ttf') format("truetype");
-//     src: url('/assets/Gilroy-Medium.ttf') format("truetype");
-//     src: url('/assets/Gilroy-Regular.ttf') format("truetype"),
-// }
-
 @font-face {
     font-family: 'proxima-black';
-    // src: url('/assets/ProximaNova-Regular.otf') format("truetype");
     src: url('/assets/ProximaNova-Black') format("truetype");
-    // src: url('/assets/ProximaNova-LightItalic.otf') format("truetype");
-    // src: url('/assets/ProximaNova-Semibold.otf') format("truetype");
-    // src: url('/assets/ProximaNova-SemiboldItalic.otf') format("truetype"),
 }
 
 @font-face {
@@ -35,4 +22,12 @@
 
 .places .place-card a {
     font-family: 'proxima-black';
+}
+
+.relevance {
+    background:  grey;
+}
+
+.navbar {
+    background: red;
 }
