@@ -4,7 +4,7 @@ $(function () {
     $(document).scroll(function () {
         var documentCurrentPos = $(this).scrollTop();
         const element = document.querySelector('.places');
-        const relevanceElement = element.scrollTop = 681;
+        const relevanceElement = element.scrollTop = 768;
 
         // Navbar HTML
         const navbar = "<header>" + 
