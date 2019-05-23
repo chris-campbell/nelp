@@ -61,6 +61,7 @@ $links: #525252;
     top: 0px;
     height: 57px;
     background: #f7f7f7;
+    display: none;
     .form-control {
         border: 0.9px solid $border-color;
         position: relative;
@@ -172,4 +173,5 @@ $links: #525252;
     z-index: 1;
     width: 100%;
     background: #8387b9;
+    display: none;
 }

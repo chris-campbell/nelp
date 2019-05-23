@@ -9,7 +9,22 @@ header {
     z-index: 1;
     width: 100%;
     background: #de716c;
+    flex-direction: row;
     .navbar-brand {
         color: #fff;
     }
+    .main-nav {
+        width: 20%;
+        li {
+            display: inline;
+            float: right;
+        }
+    }
+        
+    
+}
+
+
+.relevance {
+    display: none;
 }
