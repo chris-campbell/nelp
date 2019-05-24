@@ -8,12 +8,12 @@ $(function () {
         // Toggle logic for Nav/Relevance
         if (documentCurrentPos > elementPos) {
             if ($('.relevance').css('display') == 'none') {
-                $('.navbar').toggle();
+                $('.navbar').toggle(100);
                 $('.relevance').toggle();
             }
         } else if (documentCurrentPos < elementPos) {
              if ($('.relevance').css('display') == 'block') {
-                $('.navbar').toggle();
+                $('.navbar').toggle(100);
                 $('.relevance').toggle();
             }
         }

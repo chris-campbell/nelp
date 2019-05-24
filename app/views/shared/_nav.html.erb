@@ -1,30 +1,34 @@
 <header>
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">Nelp</a>
-        <div class='main-nav'>
-            <ul>
+    <div class='container'>
+        <a class="logo" href="#">Nelp</a>
+        <nav class="navibar">
+            <ul class='main-nav'>
                 <li>Login</li>
-                <li>Sign up</li>
+                <li class='signup'>Sign up</li>
             </ul>
-        </div>
-    </nav>
+            <ul>
+               <li><i class="fa fa-facebook-square"></i></li>
+                <li></li><i class="fa fa-reddit"></i></li>
+                <li><i class="fa fa-behance-square"></i></li> 
+            </ul>
+        </nav>
+    </div>
+</header>
     
-    <section class='relevance'>
-        <div class='container'>
-            <div class='row'><div class='col-md-4'></div>
-                <div class='col-md-4'>
-                    <select class="form-control" id="sel1">
-                        <option>Latest</option>
-                        <option>Oldest</option>
-                        <option>Popular</option>
-                        <option>Relevant</option>
-                    </select>
-                </div>
-                <div class='place-count'>
-                <p><%= @places.length %> Places Found.</p>
-                </div>
+<section class='relevance'>
+    <div class='container'>
+        <div class='row'><div class='col-md-4'></div>
+            <div class='col-md-4'>
+                <select class="form-control" id="sel1">
+                    <option>Latest</option>
+                    <option>Oldest</option>
+                    <option>Popular</option>
+                    <option>Relevant</option>
+                </select>
+            </div>
+            <div class='place-count'>
+            <p><%= @places.length %> Places Found.</p>
             </div>
         </div>
-    </section>
-    
-</header>
+    </div>
+</section>

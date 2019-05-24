@@ -1,30 +1,80 @@
 header {
-    background: #5a4390;
-    height: 30px;
+    background: #c56466;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
-.navbar {
-    position: fixed;
+.logo {
+    float: left;
+    position: relative;
+    top: 10px;
+    font-size: 27px;
+    color: #ebb154;
+    font-family: 'proxima-black';
+}
+
+.navibar {
     top: 0px;
     z-index: 1;
-    width: 100%;
-    background: #de716c;
+    width: 80%;
     flex-direction: row;
-    .navbar-brand {
-        color: #fff;
+    margin: 0 auto;
+    border-left: 1px solid #ebb154;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        float: right;
+        margin-left: 44px;
+        position: relative;
+        top: 10px;
+        /* font-size: 25px; */
+      li {
+        display: inline-block;
+        font-size: 19px;
+        padding-left: 20px;
+        color: #ebb154;
+      }
     }
-    .main-nav {
-        width: 20%;
-        li {
-            display: inline;
-            float: right;
-        }
-    }
-        
-    
 }
 
+.main-nav {
+    margin-right: 40px;
+    position: relative;
+    top: 18px;
+    border-left: 1px solid #ebb154;
+    padding-left: 22px;
+    .signup {
+        border: 2px solid #ebb154;
+        border-radius: 3px;
+        padding: 5px;
+        margin-left: 11px;
+        font-size: 18px;
+    }
+}
 
 .relevance {
     display: none;
 }
+
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 27px !important;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #ebb154;
+    position: relative;
+    top: 6px;
+}
+
+// /* When container disappears because of floated items */
+// .main-nav::after {
+//   content: '';
+//   display: table;
+//   clear: both;
+// }
