@@ -1,24 +1,25 @@
 header {
     background: #c56466;
-    height: 60px;
+    height: 52px;
     position: fixed;
     width: 100%;
     z-index: 1;
 }
 
 .logo {
-    float: left;
+        float: left;
     position: relative;
-    top: 10px;
+    top: 7px;
     font-size: 27px;
     color: #ebb154;
     font-family: 'proxima-black';
+    width: 38px;
 }
 
 .navibar {
     top: 0px;
     z-index: 1;
-    width: 80%;
+    width: 100%;
     flex-direction: row;
     margin: 0 auto;
     border-left: 1px solid #ebb154;
@@ -33,7 +34,7 @@ header {
         /* font-size: 25px; */
       li {
         display: inline-block;
-        font-size: 19px;
+        font-size: 17px;
         padding-left: 20px;
         color: #ebb154;
       }
@@ -47,11 +48,11 @@ header {
     border-left: 1px solid #ebb154;
     padding-left: 22px;
     .signup {
-        border: 2px solid #ebb154;
+       border: 2px solid #ebb154;
         border-radius: 3px;
-        padding: 5px;
+        padding: 3px;
         margin-left: 11px;
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 
@@ -63,13 +64,13 @@ header {
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
-    font-size: 27px !important;
+    font-size: 25px !important;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #ebb154;
     position: relative;
-    top: 6px;
+    top: 4px;
 }
 
 // /* When container disappears because of floated items */
