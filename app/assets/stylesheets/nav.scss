@@ -1,43 +1,42 @@
+$base-yellow: #ebb154;
+
 header {
     background: #c56466;
     height: 52px;
     position: fixed;
     width: 100%;
     z-index: 1;
-}
-
-.logo {
+    .logo {
         float: left;
-    position: relative;
-    top: 7px;
-    font-size: 27px;
-    color: #ebb154;
-    font-family: 'proxima-black';
-    width: 38px;
-}
-
-.navibar {
-    top: 0px;
-    z-index: 1;
-    width: 100%;
-    flex-direction: row;
-    margin: 0 auto;
-    border-left: 1px solid #ebb154;
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        float: right;
-        margin-left: 44px;
         position: relative;
-        top: 10px;
-        /* font-size: 25px; */
-      li {
-        display: inline-block;
-        font-size: 17px;
-        padding-left: 20px;
+        top: 7px;
+        font-size: 27px;
         color: #ebb154;
-      }
+        font-family: 'proxima-black';
+        width: 38px;
+    }
+    .navibar {
+        top: 0px;
+        z-index: 1;
+        width: 100%;
+        flex-direction: row;
+        margin: 0 auto;
+        border-left: 1px solid $base-yellow;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            float: right;
+            margin-left: 44px;
+            position: relative;
+            top: 10px;
+          li {
+            display: inline-block;
+            font-size: 17px;
+            padding-left: 20px;
+            color: $base-yellow;
+          }
+        }
     }
 }
 
@@ -45,10 +44,10 @@ header {
     margin-right: 40px;
     position: relative;
     top: 18px;
-    border-left: 1px solid #ebb154;
+    border-left: 1px solid $base-yellow;
     padding-left: 22px;
     .signup {
-       border: 2px solid #ebb154;
+       border: 2px solid $base-yellow;
         border-radius: 3px;
         padding: 3px;
         margin-left: 11px;
@@ -59,7 +58,6 @@ header {
 .relevance {
     display: none;
 }
-
 
 .fa {
     display: inline-block;
@@ -72,10 +70,3 @@ header {
     position: relative;
     top: 4px;
 }
-
-// /* When container disappears because of floated items */
-// .main-nav::after {
-//   content: '';
-//   display: table;
-//   clear: both;
-// }
