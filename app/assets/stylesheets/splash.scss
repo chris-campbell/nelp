@@ -4,8 +4,8 @@ $links: #525252;
 
 // Navbar effect transform
 .navbar.scrolled {
-  background-color: #2f2f2f !important;
-  transition: background-color 200ms linear;
+  background-color: #221626 !important;
+  transition: background-color 190ms linear;
 }
 
 // Hero section
@@ -19,12 +19,12 @@ $links: #525252;
     .action-content {
         width: 30%;
         position: relative;
-        top: 41px;
+        top: 72px;
         left: 10%;
         min-width: 334px;
     }
     h1 {
-        // font-family: 'Archivo Black', sans-serif;
+        font-family: 'proxima-black';
         font-size: 76px;
         color: $base-yellow;
         margin-bottom: 10px;
@@ -32,7 +32,6 @@ $links: #525252;
     p {
         color: $base-yellow;
         margin-bottom: 20px;
-        // font-family: 'Judson', serif;
     }
 }
 
@@ -60,8 +59,9 @@ $links: #525252;
 .relevance {
     position: relative;
     top: 0px;
-    height: 57px;
+    height: 60px;
     background: #f7f7f7;
+    display: none;
     .form-control {
         border: 0.9px solid $border-color;
         position: relative;
@@ -97,11 +97,15 @@ $links: #525252;
             display: inline;
             overflow: hidden;
             font-size: 15px;
-            
         }
         a {
             color: $links;
             text-decoration: none;
+        }
+        .star {
+            position: relative;
+            bottom: -3px;
+            right: 5px;
         }
     }
     .place-box {
@@ -163,10 +167,11 @@ $links: #525252;
     }
 }
 
-.star {
-    // display: inline;
-    position: relative;
-    bottom: -3px;
-    right: 5px;
-
+.relevance {
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    background: #8387b9;
+    display: none;
 }

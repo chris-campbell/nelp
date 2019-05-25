@@ -1,5 +1,35 @@
 <header>
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">Nelp</a>
-    </nav>
+    <div class='container'>
+        
+        <%= image_tag('logo.png', class: 'logo' )%>
+        <nav class="navibar">
+            <ul class='main-nav'>
+                <li>Login</li>
+                <li class='signup'>Sign up</li>
+            </ul>
+            <ul>
+               <li><i class="fa fa-facebook-square"></i></li>
+                <li></li><i class="fa fa-reddit"></i></li>
+                <li><i class="fa fa-behance-square"></i></li> 
+            </ul>
+        </nav>
+    </div>
 </header>
+    
+<section class='relevance'>
+    <div class='container'>
+        <div class='row'><div class='col-md-4'></div>
+            <div class='col-md-4'>
+                <select class="form-control" id="sel1">
+                    <option>Latest</option>
+                    <option>Oldest</option>
+                    <option>Popular</option>
+                    <option>Relevant</option>
+                </select>
+            </div>
+            <div class='place-count'>
+            <p><%= @places.length %> Places Found.</p>
+            </div>
+        </div>
+    </div>
+</section>
