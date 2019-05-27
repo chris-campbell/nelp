@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   post '/rate' => 'rater#create', :as => 'rate'
   get 'photos/create'
+  
+  get 'latest', to: 'places#latest'
 
   devise_for :users
   root 'places#index'

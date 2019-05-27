@@ -2,7 +2,13 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [ :new, :create, :edit, :update, :destroy ]
 
   def index
+    if params[:filter].nil?
     @place_list = Place.all
+  else
+    @place_list = Place.send(params[:filter].downcase)
+    
+  end
+    
     @places = Place.paginate(:page => params[:page], :per_page => 10)
   end
   
@@ -58,6 +64,11 @@ class PlacesController < ApplicationController
     redirect_to root_path
   end
   
+  
+  def latest
+    Place.latest
+    render :index
+  end
   
   private 
   

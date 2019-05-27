@@ -1,5 +1,11 @@
 $base-yellow: #ebb154;
 
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 header {
     background: #c56466;
     height: 52px;
@@ -14,6 +20,7 @@ header {
         color: #ebb154;
         font-family: 'proxima-black';
         width: 38px;
+        
     }
     .navibar {
         top: 0px;
@@ -30,6 +37,7 @@ header {
             margin-left: 44px;
             position: relative;
             top: 10px;
+            padding-left: 15px;
           li {
             display: inline-block;
             font-size: 17px;
@@ -49,7 +57,7 @@ header {
     .signup {
        border: 2px solid $base-yellow;
         border-radius: 3px;
-        padding: 3px;
+        padding: 5px;
         margin-left: 11px;
         font-size: 15px;
     }
@@ -57,6 +65,25 @@ header {
 
 .relevance {
     display: none;
+    .logo {
+        width: 38px;
+        position: relative;
+        top: 23px;
+    }
+    .filter  {
+        width: 90%;
+        margin: 0 auto;
+        margin-left: 64px;
+        ul {
+            width: 50%;
+            margin: 0 auto;
+            li {
+                display: inline-block;
+                margin-left: 68px;
+                color: $base-yellow;
+            }
+        }
+    }
 }
 
 .fa {
@@ -69,4 +96,43 @@ header {
     color: #ebb154;
     position: relative;
     top: 4px;
+}
+
+.share-on {
+    position: relative;
+    left: 5px;
+    font-size: 14px !important;
+    color: $base-yellow !important;
+}
+
+.social {
+    margin-left: 20px;
+}
+
+.filter {
+    width: 100%;
+    position: relative;
+    bottom: 16px;
+    text-transform: uppercase;
+}
+
+.select-filter {
+    width: 238px;
+    border-radius: 0;
+    height: 45px;
+    option {
+        background: red;
+    }
+}
+
+.title {
+    font-size: 20px;
+}
+
+.read-more {
+    color: red;
+}
+
+.place-link {
+
 }

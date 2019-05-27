@@ -13,14 +13,7 @@ class Place < ApplicationRecord
     validates :name, :address, :description, presence: true
     validates :name, :address, :description, length: { minimum: 3 }
     
-    
-    
-    def count(l)
-        
-        1.upto(l) do |n|
-            p n
-        end
-         
-    end
+    scope :latest, -> { order(created_at: :desc) }
+    scope :oldest, -> { order(created_at: :asc) }
     
 end
