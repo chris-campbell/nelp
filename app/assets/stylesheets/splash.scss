@@ -1,6 +1,7 @@
 $border-color: #e6e6e6;
 $base-yellow: #ebb154;
-$links: #525252;
+$links: #c56466;
+
 
 // Navbar effect transform
 .navbar.scrolled {
@@ -16,6 +17,8 @@ $links: #525252;
     background-repeat: no-repeat;
     background-position: 100%;
     width: 100%;
+    position: relative;
+    top: 30px;
     .action-content {
         width: 30%;
         position: relative;
@@ -59,9 +62,11 @@ $links: #525252;
 .relevance {
     position: relative;
     top: 0px;
-    height: 60px;
-    background: #f7f7f7;
+    height: auto;
     display: none;
+    background: #fafafa;
+    display: none;
+    border-bottom: 1px solid #c3c3c3;
     .form-control {
         border: 0.9px solid $border-color;
         position: relative;
@@ -77,7 +82,7 @@ $links: #525252;
 
 // Places section
 .places {
-    margin-top: 35px;
+    margin-top: 106px;
     .place-card {
         .photo-img {
             height: 90px;
@@ -87,7 +92,7 @@ $links: #525252;
             width: 73%;
             overflow: hidden;
             /* text-align: right; */
-            font-size: 13px;
+            font-size: 18px;
             margin-top: 12px;
         }
         border-bottom: 0.5px solid $border-color;
@@ -96,7 +101,7 @@ $links: #525252;
             padding-bottom: 9px;
             display: inline;
             overflow: hidden;
-            font-size: 15px;
+            font-size: 20px;
         }
         a {
             color: $links;
@@ -172,6 +177,5 @@ $links: #525252;
     top: 0px;
     z-index: 1;
     width: 100%;
-    background: #8387b9;
     display: none;
 }

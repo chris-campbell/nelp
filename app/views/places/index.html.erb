@@ -21,27 +21,28 @@
 <section class="places container">
     <div class='row'>
         <section class='place-box col-md-8'>
-            <h2>Cool places in <span>Brooklyn</span></h2>
-            <% @place_list.each do |place| %>
-                        <article class='place-card'>
-                            <div class='hello'>
-                                <div class='photo-img'>
-                                    <% if place.photos.any? %>
-                                        <%= image_tag(place.photos[0].picture, class: 'photo') %>
-                                    <% else %>
-                                        <%= image_tag('placeholder.png', class: 'photo') %>
-                                    <% end %>
-                                </div>
+            <!--<h2>Cool places in <span>Brooklyn</span></h2>-->
+            <% @place_list.each_with_index do |place, index| %>
+                    <article class='place-card'>
+                        <div class='hello'>
+                            <div class='photo-img'>
+                                <% if place.photos.any? %>
+                                    <%= image_tag(place.photos[0].picture, class: 'photo') %>
+                                <% else %>
+                                    <%= image_tag('placeholder.png', class: 'photo') %>
+                                <% end %>
                             </div>
-                            <h4 class='title'><%= place.count(@place_list.length) %>. <%= link_to place.name, place_path(place) %></h4>
+                        </div>
+                        <h4 class='title'><%= "#{index + 1}" %>. <%= link_to place.name, place_path(place), class: 'place-link' %></h4>
 
-                            <%= rating_for place, "custome_design"%>
-                            <p class='place-description'>
-                                <%= truncate(place.description, length: 256) %> <%= link_to 'Read more', place_path(place) %>
-                            </p>
-                        </article>
-                <% end %>
+                        <%= rating_for place, "custome_design"%>
+                        <p class='place-description'>
+                            <%= truncate(place.description, length: 156) %> <%= link_to 'Read more', place_path(place), class: 'read-more' %>
+                        </p>
+                    </article>
+            <% end %>
         </section>
+
         <section class='recommendation col-md-4'>
             <h2>Recommendation</h2>
             <div class='box-1'></div>

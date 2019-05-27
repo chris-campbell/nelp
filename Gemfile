@@ -48,6 +48,8 @@ gem 'carrierwave', '~> 1.0'
 gem "fog-aws"
 # Add star rating functionality to application. Read more: 
 gem 'ratyrate'
+# Neatly displays objects in console
+gem 'awesome_print', '~> 1.8'
 
 # Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
