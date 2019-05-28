@@ -50,6 +50,8 @@ gem "fog-aws"
 gem 'ratyrate'
 # Neatly displays objects in console
 gem 'awesome_print', '~> 1.8'
+# Installs lightbox
+gem 'lightbox2-rails'
 
 # Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
