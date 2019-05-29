@@ -1,94 +1,99 @@
-<!-- Places information -->
-<div class="place-information col-6 offset-3">
-  <h1><%= @place.name %></h1>
-  <i><%= @place.address %></i>
-  <br/><br/>
-  <p><%= @place.description %></p>
-
-  <!-- Map display -->
-  <div id="map"></div>
-    
-  <script>
-    <% if @place.latitude.present? && @place.longitude.present? %>
-        function initMap() {
-          var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
-    
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 14,
-            center: myLatLng
-          });
-    
-          var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Hello World!'
-          });
-        }
-  </script>
-      
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUFf4GXS66uhKjO30WnbPocxa-CgsEjfg&callback=initMap">
-  </script>
-  <% end %>
-  <!-- Map display -->
+  <!-- Places information -->
+  <div class="place-information col-6 offset-3">
+    <h1><%= @place.name %></h1>
+    <i><%= @place.address %></i>
+    <%= rating_for @place, "custome_design" %>
+    <br/><br/>
+    <p><%= @place.description %></p>
   
-  <!-- Star Rating -->
-  <!--<%= rating_for @place, "custome_design" %>-->
-  <!--<div class="float-right">-->
-  <!--  <% if current_user && current_user == @place.user %>-->
-  <!--    <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>-->
-  <!--    <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>-->
-  <!--  <% end %>-->
-  <!--</div>-->
-</div>
-<!-- Places information -->
-
-    
-    
-    <div class='booyah-box-header col-6 offset-3'>
-    <% @place.photos.each do |photo| %>
-      <ul>
-        <li>
-          <%= image_tag photo.picture %>
-          <%= photo.caption %>
-        </li>
-      </ul>
+    <!-- Map display -->
+    <div id="map"></div>
       
+    <script>
+      <% if @place.latitude.present? && @place.longitude.present? %>
+          function initMap() {
+            var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+      
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 14,
+              center: myLatLng
+            });
+      
+            var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              title: 'Hello World!'
+            });
+          }
+    </script>
+        
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXFR30eadbJf5xsDS_mz4-7cmcmp_Wpkg&callback=initMap">
+    </script>
     <% end %>
+    <!-- Map display -->
     
-      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-        <%= f.input :caption %>
-        <%= f.input :picture %>
-        <%= f.submit "Add photo", class: 'btn btn-primary' %>
+    <!-- Star Rating -->
+    
+    <!--<div class="float-right">-->
+    <!--  <% if current_user && current_user == @place.user %>-->
+    <!--    <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>-->
+    <!--    <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>-->
+    <!--  <% end %>-->
+    <!--</div>-->
+  </div>
+  <!-- Places information -->
+
+  <!-- Places images -->
+  <div class='places-images col-6 offset-3'>
+    <h4>Jake's Dilemma photos</h4>
+    <div id="film_roll">
+      <% @place.photos.each_with_index do |photo, index| %>
+        <%= photo.caption %>
+        <div>
+          <%= link_to photo.picture.to_s, data: { lightbox: 'image1'} do %>
+            <%= image_tag photo.picture %>
+          <% end %>
+        </div>
       <% end %>
     </div>
+  </div>
+  <!-- Places images -->
+
+  <div>
+    <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+      <%= f.input :caption %>
+      <%= f.input :picture %>
+      <%= f.submit "Add photo", class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+    
+  <div class='clear'></div>
+    
+  <div class="booyah-box-header col-10 offset-1">
+    <h1 class="float-left">Comments</h1>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+      Add a comment
+    </button>
     
     <div class='clear'></div>
     
-    <div class="booyah-box-header col-10 offset-1">
-      <h1 class="float-left">Comments</h1>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
-        Add a comment
-      </button>
-    
-    <div class='clear'></div>
-    
-      <div class='row'>
-        <% @place.comments.each do |comment| %>
-          <div class="col-10 col-sm-6 offset-1" %>
-            <div>
-              <blockquote>
-                <% if comment.humanized_rating.present? %>
-                  <b><%= comment.humanized_rating %></b> -
-                <% end %>
-                <%= comment.message %>
-                <small><%= comment.user.email %></small>
-              </blockquote>
-            </div>
-          </div>
-        <% end %>
+  <div class='row'>
+      <% @place.comments.each do |comment| %>
+      <div class="col-10 col-sm-6 offset-1" %>
+        <div>
+          <blockquote>
+            <% if comment.humanized_rating.present? %>
+              <b><%= comment.humanized_rating %></b> -
+            <% end %>
+            <%= comment.message %>
+            <small><%= comment.user.email %></small>
+          </blockquote>
+        </div>
       </div>
+      <% end %>
+    </div>
   </div>
   
   <!-- Modal -->
@@ -115,4 +120,14 @@
       </div>
     </div>
   </div>
-</body>
+  <!-- Modal -->
+
+
+<script>
+  $(function() {
+    fr = new FilmRoll({
+      container: '#film_roll',
+      height: 330
+    });
+  });
+</script>
