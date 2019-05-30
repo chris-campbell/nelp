@@ -70,6 +70,10 @@ class PlacesController < ApplicationController
     render :index
   end
   
+  def test
+    puts "#{params[:hell]}"
+  end
+  
   private 
   
     def place_params

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
   get 'photos/create'
   
+  post 'test', to: 'places#test'
+  
   get 'latest', to: 'places#latest'
 
   devise_for :users
