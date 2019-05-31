@@ -7,6 +7,12 @@
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :description %>
+    <div class='price-range'>
+      <%= f.radio_button(:range, "1") %>
+      <%= f.radio_button(:range, "2") %>
+      <%= f.radio_button(:range, "3") %>
+      <%= f.radio_button(:range, "4") %>
+    </div>  
     <br />
     <%= f.submit 'Add Place', class: 'btn btn-primary' %>
   <% end %>

@@ -71,12 +71,25 @@ class PlacesController < ApplicationController
   end
   
   def test
-    puts "#{params[:hell]}"
+    puts "#{params[:category]} Rocks!!!!!"
   end
   
   private 
   
     def place_params
-      params.require(:place).permit(:name, :address, :description)
+      params.require(:place).permit(:name, :address, :description, :range)
+    end
+    
+    helper_method :dollar_range
+    def dollar_range(num)
+        if num == '4'
+            return '$$$$'
+        elsif num == '3'
+          return '$$$'
+        elsif num == '2'
+          return '$$'
+        else
+          return '$'
+        end
     end
 end

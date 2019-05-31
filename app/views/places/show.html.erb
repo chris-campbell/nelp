@@ -3,6 +3,7 @@
     <h1><%= @place.name %></h1>
     <i><%= @place.address %></i>
     <%= rating_for @place, "custome_design" %>
+    <h1 class='price-range'><%= dollar_range(@place.range) %></h1>
     <br/><br/>
     <p><%= @place.description %></p>
     <p><%= @place.user.email %></p>
@@ -32,7 +33,7 @@
     </script>
     <% end %>
     <!-- Map display -->
-<%= button_to('test', test_path, params: {hell: 'hello'}, method: :post) %>
+
   </div>
   <!-- Places information -->
 
