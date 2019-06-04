@@ -207,3 +207,8 @@ header {
     position: relative;
     bottom: 3px;
 }
+
+.main-nav li a {
+    color: $base-yellow;
+    text-decoration: none;
+}
