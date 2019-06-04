@@ -1,0 +1,19 @@
+<div class='places-images col-6 offset-3'>
+    <div class='share'>
+      <h4>Photos from Jake's Dilemma</h4>
+      <div class="btn-group add-photo-btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary text-center add-photo" data-toggle="modal" data-target="#myModal"><i class="add fa fa-plus-circle"></i><span>Add Photo</span></button>
+        <button type="button" class="btn btn-secondary text-center share-btn"><span class='share-text'>Share</span><i class="share-icon fa fa-share"></i></button>
+      </div>
+    </div>
+    <div id="film_roll">
+      <% @place.photos.each_with_index do |photo, index| %>
+        <%= photo.caption %>
+        <div>
+          <%= link_to photo.picture.to_s, data: { lightbox: 'image1'} do %>
+            <%= image_tag photo.picture %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+</div>

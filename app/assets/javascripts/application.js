@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require popper
 //= require bootstrap-sprockets
 //= require jquery.raty
 //= require ratyrate
+//= require lightbox
 //= require_tree .
