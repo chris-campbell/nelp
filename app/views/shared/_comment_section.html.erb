@@ -1,0 +1,33 @@
+<div class="booyah-box-header comments col-6 offset-3">
+  <button type="button" class="write-review-btn btn btn-secondary text-center" data-toggle="modal" data-target="#reviewModal">
+    <i class="add fa fa-plus-circle"></i>
+    <span>Write a review</span>
+  </button>
+  
+  <h1 class="review-heading">Reviews</h1>
+  
+  <div class='clear'></div>
+  
+  <div class='row'>
+    <% @place.comments.each do |comment| %>
+      <div class="lone-review col-10 col-sm-10 offset-1" %>
+        <div class='user-img'>
+          <% if @place.photos.any? %>
+            <%= image_tag(@place.photos[0].picture, class: 'photo') %>
+          <% else %>
+            <%= image_tag('placeholder.png', class: 'photo') %>
+          <% end %>
+        </div>
+        <div>
+          <div class='review-text'>
+            <p class='date'><%= format_date(comment.created_at) %></p>
+            <%= comment.message %>
+            <br>
+            <small class='author'>Posted by: <%= @place.user.name %></small>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  
+</div>

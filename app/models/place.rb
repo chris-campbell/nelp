@@ -17,5 +17,9 @@ class Place < ApplicationRecord
     scope :oldest, -> { order(created_at: :asc) }
     
     
+    def format_date(date)
+        formatted = date.strftime('%b %e, %l:%M %p')
+        return formatted
+    end
     
 end
