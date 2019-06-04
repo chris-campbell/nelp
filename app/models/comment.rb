@@ -3,6 +3,9 @@ class Comment < ApplicationRecord
     belongs_to :place
     after_create :send_comment_email
     
+    # Core Validations for application
+    validates :message, presence: true, length: { in: 20..259 }
+    
     RATINGS = {
         'one star': '1_star',
         'two stars': '2_stars',

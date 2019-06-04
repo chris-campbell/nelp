@@ -11,15 +11,12 @@ class Place < ApplicationRecord
     
     # Core Validations for application
     validates :name, :address, :description, presence: true
-    validates :name, :address, :description, length: { minimum: 3 }
+    validates :name, length: { in: 3..52 }
+    validates :address, length: { in: 9..55 }
+    validates :description, length: { in: 20..259 }
     
+    # Scopes available to places controller
     scope :latest, -> { order(created_at: :desc) }
     scope :oldest, -> { order(created_at: :asc) }
-    
-    
-    def format_date(date)
-        formatted = date.strftime('%b %e, %l:%M %p')
-        return formatted
-    end
     
 end

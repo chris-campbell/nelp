@@ -3,8 +3,13 @@
         <%= image_tag('logo.png', class: 'logo' )%>
         <nav class="navibar">
             <ul class='main-nav'>
-                <li>Login</li>
-                <li class='signup'>Sign up</li>
+                <% if user_signed_in? %>
+                    <li><%= link_to 'Sign out', destroy_user_session_path %></li>
+                <% else %>
+                    
+                    <li><%= link_to 'Login', new_user_session_path %></li>
+                    <li class='signup'><%= link_to 'Sign up', new_user_registration_path %></li>
+                <% end %>
             </ul>
             <ul class='social'>
                <li class='share-on'>Share on</li>
@@ -26,7 +31,7 @@
                 <%= form_tag("/", method: "get") do %>
                     <%= select_tag('filter', raw("<option>Latest</option><option>Oldest</option>"), class: 'select') %>
                     <%= submit_tag("Search", class: 'filter-submit-btn') %>
-                <%  end %>
+                <% end %>
             </div>
         </div>
     </div>

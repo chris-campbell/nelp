@@ -6,6 +6,16 @@
     height: auto;
 }
 
-.form-control {
-    height: 200px;
-} 
+.form-outter textarea {
+    height: 300px;
+}
+
+.booyah-box {
+    background: #f1f1f1;
+    /* padding-top: 203px; */
+    padding: 30px;
+    position: relative;
+    top: 186px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
