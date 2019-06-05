@@ -18,7 +18,9 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
     @comment = Comment.new
     @photo = Photo.new
-    @user = User.find(current_user.id)
+    if current_user
+      @user = User.find(current_user.id)
+    end
   end
   
   def edit
