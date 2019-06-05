@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+
 
         $(document).scroll(function () {
             const element = $('.buffer');
@@ -21,5 +21,3 @@ $( document ).ready(function() {
                 }
             }
         });
- 
-});
