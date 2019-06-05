@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+    $(function () {
         $(document).scroll(function () {
             const element = $('.buffer');
             var documentCurrentPos = $(this).scrollTop();
@@ -21,5 +21,5 @@ $( document ).ready(function() {
                 }
             }
         });
- 
+    });
 });
