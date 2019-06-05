@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).on('ready', function () {
     $(function () {
         $(document).scroll(function () {
             const element = $('.buffer');
