@@ -1,5 +1,5 @@
-$( document ).ready(function() {
-    $(function () {
+
+
         $(document).scroll(function () {
             alert('hello');
             const element = $('.buffer');
@@ -22,5 +22,4 @@ $( document ).ready(function() {
                 }
             }
         });
-    });
-});
+
