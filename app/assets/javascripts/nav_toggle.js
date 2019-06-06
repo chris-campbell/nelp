@@ -1,6 +1,5 @@
 $(function() {
     $(document).scroll(function () {
-        alert('hello');
         const element = $('.buffer');
         var documentCurrentPos = $(this).scrollTop();
         var position = element.position();
