@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(function() {
 
         $(document).scroll(function () {
             alert('hello');
