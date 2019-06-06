@@ -27,7 +27,7 @@ config.assets.digest = true
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-
+  config.assets.debug = true
   config.serve_static_assets = true
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
