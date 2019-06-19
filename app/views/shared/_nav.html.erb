@@ -1,24 +1,42 @@
 <header>
-    <div class='container'>
-        <%= image_tag('logo.png', class: 'logo' )%>
-        <nav class="navibar">
-            <ul class='main-nav'>
-                <% if user_signed_in? %>
-                    <li><%= link_to 'Sign out', destroy_user_session_path %></li>
-                <% else %>
+<!--<div class='container'>-->
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <%= image_tag('logo.png', class: 'logo navbar-brand' ) %>
+  <div class="collapse navbar-collapse main-nav" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to 'Login', new_user_session_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+        <!--<%= image_tag('logo.png', class: 'logo' )%>-->
+        <!--<nav class="navibar">-->
+        <!--    <ul class='main-nav'>-->
+        <!--        <% if user_signed_in? %>-->
+        <!--            <li><%= link_to 'Sign out', destroy_user_session_path %></li>-->
+        <!--        <% else %>-->
                     
-                    <li><%= link_to 'Login', new_user_session_path %></li>
-                    <li class='signup'><%= link_to 'Sign up', new_user_registration_path %></li>
-                <% end %>
-            </ul>
-            <ul class='social'>
-               <li class='share-on'>Share on</li>
-               <li><i class="fa fa-facebook-square"></i></li>
-               <li></li><i class="fa fa-reddit"></i></li>
-               <li><i class="fa fa-behance-square"></i></li> 
-            </ul>
-        </nav>
-    </div>
+        <!--            <li><%= link_to 'Login', new_user_session_path %></li>-->
+        <!--            <li class='signup'><%= link_to 'Sign up', new_user_registration_path %></li>-->
+        <!--        <% end %>-->
+        <!--    </ul>-->
+        <!--    <ul class='social'>-->
+        <!--       <li class='share-on'>Share on</li>-->
+        <!--       <li><i class="fa fa-facebook-square"></i></li>-->
+        <!--       <li></li><i class="fa fa-reddit"></i></li>-->
+        <!--       <li><i class="fa fa-behance-square"></i></li> -->
+        <!--    </ul>-->
+        <!--</nav>-->
+    <!--</div>-->
 </header>
     
 <section class='relevance'>
@@ -34,5 +52,5 @@
                 <% end %>
             </div>
         </div>
-    </div>
+    <!--</div>-->
 </section>

@@ -1,181 +1,180 @@
-$border-color: #e6e6e6;
-$base-yellow: #ebb154;
-$links: #c56466;
+// $border-color: #e6e6e6;
+// $base-yellow: #ebb154;
+// $links: #c56466;
 
+// // Navbar effect transform
+// .navbar.scrolled {
+//   background-color: #221626 !important;
+//   transition: background-color 190ms linear;
+// }
 
-// Navbar effect transform
-.navbar.scrolled {
-  background-color: #221626 !important;
-  transition: background-color 190ms linear;
-}
+// // Hero section
+// .hero {
+//     background-image: url(hero.png);
+//     height: 95vh;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: 100%;
+//     width: 100%;
+//     position: relative;
+//     top: 70px;
+//     .action-content {
+//         width: 30%;
+//         position: relative;
+//         top: 72px;
+//         left: 10%;
+//         min-width: 334px;
+//     }
+//     h1 {
+//         font-family: 'proxima-black';
+//         font-size: 76px;
+//         color: $base-yellow;
+//         margin-bottom: 10px;
+//     }
+//     p {
+//         color: $base-yellow;
+//         margin-bottom: 20px;
+//     }
+// }
 
-// Hero section
-.hero {
-    background-image: url(hero.png);
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 100%;
-    width: 100%;
-    position: relative;
-    top: 53px;
-    .action-content {
-        width: 30%;
-        position: relative;
-        top: 72px;
-        left: 10%;
-        min-width: 334px;
-    }
-    h1 {
-        font-family: 'proxima-black';
-        font-size: 76px;
-        color: $base-yellow;
-        margin-bottom: 10px;
-    }
-    p {
-        color: $base-yellow;
-        margin-bottom: 20px;
-    }
-}
+// .action-btn {
+//     button {
+//         display: inline-block;
+//         padding: 0.35em 1.2em;
+//         margin: 0 0.3em 0.3em 0;
+//         border-radius: 0.12em;
+//         box-sizing: border-box;
+//         text-decoration: none;
+//         font-family:'Roboto',sans-serif;
+//         font-weight: 900;
+//         color: #cc6869;
+//         text-align: center;
+//         transition: all 0.2s;
+//     }
+//     .learn-more {
+//         background: #357898;
+//         border: 1px solid #357898;
+//     }
+// }
 
-.action-btn {
-    button {
-        display: inline-block;
-        padding: 0.35em 1.2em;
-        margin: 0 0.3em 0.3em 0;
-        border-radius: 0.12em;
-        box-sizing: border-box;
-        text-decoration: none;
-        font-family:'Roboto',sans-serif;
-        font-weight: 900;
-        color: #cc6869;
-        text-align: center;
-        transition: all 0.2s;
-    }
-    .learn-more {
-        background: #357898;
-        border: 1px solid #357898;
-    }
-}
+// // Relevance section
+// .relevance {
+//     position: relative;
+//     top: 0px;
+//     height: auto;
+//     display: none;
+//     background: #fafafa;
+//     display: none;
+//     border-bottom: 1px solid #eaeaea;
+//     .form-control {
+//         border: 0.9px solid $border-color;
+//         position: relative;
+//         top: 10px;
+//     }
+//     .place-count {
+//         font-size: 13px;
+//         position: relative;
+//         top: 19px;
+//     }
 
-// Relevance section
-.relevance {
-    position: relative;
-    top: 0px;
-    height: auto;
-    display: none;
-    background: #fafafa;
-    display: none;
-    border-bottom: 1px solid #c3c3c3;
-    .form-control {
-        border: 0.9px solid $border-color;
-        position: relative;
-        top: 10px;
-    }
-    .place-count {
-        font-size: 13px;
-        position: relative;
-        top: 19px;
-    }
+// }
 
-}
+// // Places section
+// .places {
+//     margin-top: 106px;
+//     .place-card {
+//         .photo-img {
+//             height: 90px;
+//             display: inline;
+//         }
+//         .place-description {
+//             width: 73%;
+//             overflow: hidden;
+//             /* text-align: right; */
+//             font-size: 18px;
+//             margin-top: 12px;
+//         }
+//         border-bottom: 0.5px solid $border-color;
+//         padding: 25px;
+//         .title {
+//             padding-bottom: 9px;
+//             display: inline;
+//             overflow: hidden;
+//             font-size: 20px;
+//         }
+//         a {
+//             color: $links;
+//             text-decoration: none;
+//         }
+//         .star {
+//             position: relative;
+//             bottom: -3px;
+//             right: 5px;
+//         }
+//     }
+//     .place-box {
+//         border-right: 0.5px solid $border-color;
+//         span {
+//             color: #ebb154;
+//         }
+//     }
+//     .photo {
+//         width: 75px;
+//         height: 75px;
+//         float: left;
+//         border-radius: 5px;
+//         margin-right: 19px;
+//     }
 
-// Places section
-.places {
-    margin-top: 106px;
-    .place-card {
-        .photo-img {
-            height: 90px;
-            display: inline;
-        }
-        .place-description {
-            width: 73%;
-            overflow: hidden;
-            /* text-align: right; */
-            font-size: 18px;
-            margin-top: 12px;
-        }
-        border-bottom: 0.5px solid $border-color;
-        padding: 25px;
-        .title {
-            padding-bottom: 9px;
-            display: inline;
-            overflow: hidden;
-            font-size: 20px;
-        }
-        a {
-            color: $links;
-            text-decoration: none;
-        }
-        .star {
-            position: relative;
-            bottom: -3px;
-            right: 5px;
-        }
-    }
-    .place-box {
-        border-right: 0.5px solid $border-color;
-        span {
-            color: #ebb154;
-        }
-    }
-    .photo {
-        width: 75px;
-        height: 75px;
-        float: left;
-        border-radius: 5px;
-        margin-right: 19px;
-    }
+// }
 
-}
-
-// Recommendation section
-.recommendation {
-    margin: 0 auto;
-    h2 {
-        text-align: center;
-    }
-    .box-1, .box-2, .box-3 {
-        width: 300px;
-        height: 300px;
-        background: $border-color;
-        margin: 0 auto;
-        margin-top: 20px;
-    }
+// // Recommendation section
+// .recommendation {
+//     margin: 0 auto;
+//     h2 {
+//         text-align: center;
+//     }
+//     .box-1, .box-2, .box-3 {
+//         width: 300px;
+//         height: 300px;
+//         background: $border-color;
+//         margin: 0 auto;
+//         margin-top: 20px;
+//     }
     
-}
+// }
 
-// Media Queries
-@media (min-width: 1100px) {
-    .action-content {
-        h1 {
-          font-size: 100px;  
-        }
-        p {
-            font-size: 19px;
-        }
-    }
-}
+// // Media Queries
+// @media (min-width: 1100px) {
+//     .action-content {
+//         h1 {
+//           font-size: 100px;  
+//         }
+//         p {
+//             font-size: 19px;
+//         }
+//     }
+// }
 
-@media (min-width: 1250px) {
-    .action-content {
-        h1 {
-          font-size: 118px;  
-        }
-        p {
-            font-size: 21px;
-            white-space: wrap;
-        }
-    }
-    .action-btn {
-        margin-top: 10px;
-    }
-}
+// @media (min-width: 1250px) {
+//     .action-content {
+//         h1 {
+//           font-size: 118px;  
+//         }
+//         p {
+//             font-size: 21px;
+//             white-space: wrap;
+//         }
+//     }
+//     .action-btn {
+//         margin-top: 10px;
+//     }
+// }
 
-.relevance {
-    position: fixed;
-    top: 0px;
-    z-index: 1;
-    width: 100%;
-    display: none;
-}
+// .relevance {
+//     position: fixed;
+//     top: 0px;
+//     z-index: 1;
+//     width: 100%;
+//     display: none;
+// }
