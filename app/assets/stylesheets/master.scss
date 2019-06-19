@@ -18,8 +18,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #efefef;
     border-color: #efefef;
     color: #452a4c;
-    position: relative;
+    position: fixed;
     top: 102px;
     z-index: 1;
     border-radius: 0;
+    width: 100%;
 }
+
