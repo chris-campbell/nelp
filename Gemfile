@@ -53,6 +53,8 @@ gem 'awesome_print', '~> 1.8'
 # Installs lightbox
 gem 'lightbox2-rails'
 
+gem 'owlcarousel-rails'
+
 # Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

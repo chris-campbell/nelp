@@ -1,78 +1,49 @@
-<!-- Hero section -->
-<section class="hero">
-    <div class='action-content'>
-        <h1>Find Adventure</h1>
-        <p>
-            Bacon ipsum dolor amet brisket sausage tail ham hock,
-            filet mignon rump shankle sirloin beef ribs kielbasa. 
-            Filet mignon beef ribs landjaeger drumstick. Drumstick
-            picanha tail kielbasa. Short ribs ham bresaola pork loin capicola.
-        </p>
-        <div class='action-btn'>
-            <button>Sign up</button>
-            <button class='learn-more'>Learn more</button>
-        </div>
-    </div>
-</section>
-<!-- Hero section -->
-
-<!-- Relevance section -->
-<section class='relevance'>
-    <div class='container'>
-        <div class='row'>
-            <div class='col-md-4'></div>
-            <div class='col-md-4'>
-                <select class="form-control" id="sel1">
-                    <option>Latest</option>
-                    <option>Oldest</option>
-                    <option>Popular</option>
-                    <option>Relevant</option>
-                </select>
-            </div>
-            <div class='place-count'>
-                <p><%= @places.length %> Places Found.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Relevance section -->
-
-<!-- Places section -->
-<section class="places container">
-    <div class='row'>
-        <section class='place-box col-md-8'>
-            <h2>Cool places in <span>Brooklyn</span></h2>
-            <%=
-            <% @places.each do |place| %>
-                    
-                        <article class='place-card'>
-                            <div class='hello'>
-                                <div class='photo-img'>
-                                    <% if place.photos.any? %>
-                                        <%= image_tag(place.photos[0].picture, class: 'photo') %>
-                                    <% else %>
-                                        <%= image_tag('placeholder.png', class: 'photo') %>
-                                    <% end %>
-                                </div>
-                            </div>
+<div class='content'>
+    <div class='splash-content-outter'>
+        <div class='splash-content-inner'>
+            <div class="owl-carousel owl-theme">
+                 <div class='page-1'>
+                     <%= image_tag('logo', class: 'logo') %>
+                     <h2>Join Our Community</h2>
+                     <p>
+                         Date night just got much easier, with Nelp finding that spot where spark fly is just a few clicks away.
+                     </p>
+                     <p class='draw-in'>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at enim eu mauris aliquet hendrerit.
+                     </p>
+                 </div>
+                 <div class='page-2'>
+                     <%= image_tag('park', class: 'park') %>
+                     <h2>Private Getaways</h2>
+                     <p class='draw-in'>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at enim eu mauris aliquet hendrerit.
+                     </p>
                      
-                            <h4 class='title'> <%= link_to place.name, place_path(place) %></h4>
+                     <button type="button" class="sign-up-btn btn btn-primary btn-sm">
+                         Sign up
+                    </button>
+                 </div>
 
-                            <%= rating_for place, "custome_design"%>
-                            <p class='place-description'>
-                                <%= truncate(place.description, length: 256) %> <%= link_to 'Read more', place_path(place) %>
-                            </p>
-                        </article>
-                    
-                <% end %>
-                
-        </section>
-        <section class='recommendation col-md-4'>
-            <h2>Recommendation</h2>
-            <div class='box-1'></div>
-            <div class='box-2'></div>
-            <div class='box-3'></div>
-        </section>
+            </div>
+        </div>
     </div>
-</section>
-<!-- Places section -->
+</div>
+
+
+<script>
+    $(".owl-carousel").owlCarousel({
+        items: 2,
+        loop: false,
+        center: true,
+        margin: 10,
+        responsiveClass: false,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            1240: {
+                items: 2,
+            }
+        }
+    });
+</script>

@@ -17,4 +17,5 @@
 //= require jquery.raty
 //= require ratyrate
 //= require lightbox
+//= require owl.carousel
 //= require_tree .
