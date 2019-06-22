@@ -1,0 +1,77 @@
+.form-inner {
+    position: relative;
+    top: 2px;
+    .control-label {
+        font-size: 13px;
+        position: relative;
+        left: 9%;
+        top: 5px;
+        color: #4A6577;
+        font-family: 'proxima-regular';
+        abbr {
+            display: none;
+        }
+    }
+}
+
+.help-block {
+    font-size: 10px;
+    position: relative;
+    left: 10%;
+    top: 15px;
+    color: #f45758;
+    font-family: 'proxima-regular';
+}
+
+.create-account-btn {
+    background-color: #f45758;
+    border-color: #f45758;
+    border-radius: 45px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 52px;
+    font-family: 'proxima-regular';
+}
+
+.login-link {
+    text-align: center;
+    display: block;
+    font-size: 13px;
+    margin-top: 6px;
+    color: #4A6577;
+}
+
+.form-control {
+    display: block;
+    width: 84%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    margin: 0 auto;
+    margin-bottom: -14px !important;
+}
+
+form input[type=text] {
+    color: #545454 !important;
+}
+
+.logo-signup {
+    width: 20% !important;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 20px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #939393 !important;
+  opacity: 1; /* Firefox */
+  font-size: 0.9rem !important;
+}

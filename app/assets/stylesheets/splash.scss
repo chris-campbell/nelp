@@ -20,7 +20,8 @@
         position: relative;
         top: 38px;
         .splash-content-inner {
-            height: 517px;
+            height: auto;
+            min-height: 517px;
             background-color: #fff;
             border-radius: 7px;
             width: 85%;
