@@ -1,77 +1,86 @@
+$form-label-color: #4a6577;
+$form-help-block: #f45758;
+$vibrant-red-background: #f45758;
+$form-font-color: #444;
+$grey-border: rgba(0, 0, 0, .15);
+$form-placeholder: #939393
+$white-background-color: #fff;
+
 .form-inner {
+  position: relative;
+  top: 2px;
+
+  .control-label {
+    color: $form-label-color;
+    font-family: 'proxima-regular';
+    font-size: 13px;
+    left: 9%;
     position: relative;
-    top: 2px;
-    .control-label {
-        font-size: 13px;
-        position: relative;
-        left: 9%;
-        top: 5px;
-        color: #4A6577;
-        font-family: 'proxima-regular';
-        abbr {
-            display: none;
-        }
+    top: 5px;
+
+    abbr {
+      display: none;
     }
+  }
 }
 
 .help-block {
-    font-size: 10px;
-    position: relative;
-    left: 10%;
-    top: 15px;
-    color: #f45758;
-    font-family: 'proxima-regular';
+  color: $form-help-block;
+  font-family: 'proxima-regular';
+  font-size: 10px;
+  left: 10%;
+  position: relative;
+  top: 15px;
 }
 
 .create-account-btn {
-    background-color: #f45758;
-    border-color: #f45758;
-    border-radius: 45px;
-    margin: 0 auto;
-    display: block;
-    margin-top: 52px;
-    font-family: 'proxima-regular';
+  background-color: $vibrant-red-background;
+  border-color: $vibrant-red-background;
+  border-radius: 45px;
+  display: block;
+  font-family: 'proxima-regular';
+  margin: 52px auto 0;
 }
 
 .login-link {
-    text-align: center;
-    display: block;
-    font-size: 13px;
-    margin-top: 6px;
-    color: #4A6577;
+  color: $form-label-color;
+  display: block;
+  font-size: 13px;
+  margin-top: 6px;
+  text-align: center;
 }
 
 .form-control {
-    display: block;
-    width: 84%;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
-    line-height: 1.25;
-    color: #464a4c;
-    background-color: #fff;
-    background-image: none;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0.25rem;
-    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    margin: 0 auto;
-    margin-bottom: -14px !important;
+  background-clip: padding-box;
+  background-color: $white-background-color;
+  background-image: none;
+  border: 1px solid $grey-border;
+  border-radius: .25rem;
+  color: $form-font-color;
+  display: block;
+  font-size: .9rem;
+  line-height: 1.25;
+  margin: 0 auto -14px !important;
+  padding: .5rem .75rem;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  width: 84%;
 }
 
 form input[type=text] {
-    color: #545454 !important;
+  color: $form-font-color !important;
 }
 
 .logo-signup {
-    width: 20% !important;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-    top: 20px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  width: 20% !important;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #939393 !important;
-  opacity: 1; /* Firefox */
-  font-size: 0.9rem !important;
+::placeholder {
+  // * Chrome, Firefox, Opera, Safari 10.1+ *
+  color: $form-placeholder !important; // sass-lint:disable-line no-important
+  font-size: .9rem !important;
+  opacity: 1;
 }
