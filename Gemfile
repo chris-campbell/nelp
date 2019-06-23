@@ -54,6 +54,7 @@ gem 'awesome_print', '~> 1.8'
 gem 'lightbox2-rails'
 # Content carousel for mobile splash
 gem 'owlcarousel-rails'
+gem 'rails-controller-testing'
 
 # Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
@@ -61,14 +62,14 @@ group :development, :test do
   # console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
+  # Testing
+  gem "factory_bot_rails"
 end
 
 group :development do
   # Brakeman is a static analysis tool which checks Ruby on Rails applications
   # for security vulnerabilities
   gem 'brakeman'
-  # Testing
-  gem 'factory_bot'
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
