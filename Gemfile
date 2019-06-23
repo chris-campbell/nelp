@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
@@ -35,24 +35,24 @@ gem 'will_paginate', '>= 3.1'
 # Simplify Rails form. Read more: https://github.com/plataformatec/simple_form
 gem 'simple_form'
 # Provides rails access to font-awesome web fonts. Read more: https://github.com/bokmann/font-awesome-rails
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 # Devise is a flexible authentication solution for Rails based on Warde
 gem 'devise'
 # Forward and reverse geocoding, and IP address geocoding
 gem 'geocoder'
 # Configuration values often include sensitive information.
-gem "figaro"
+gem 'figaro'
 # Simple and extremely flexible way to upload files from Ruby applications
 gem 'carrierwave', '~> 1.0'
 # Configure fog upload for AWS
-gem "fog-aws"
-# Add star rating functionality to application. Read more: 
+gem 'fog-aws'
+# Add star rating functionality to application. Read more:
 gem 'ratyrate'
 # Neatly displays objects in console
 gem 'awesome_print', '~> 1.8'
 # Installs lightbox
 gem 'lightbox2-rails'
-
+# Content carousel for mobile splash
 gem 'owlcarousel-rails'
 
 # Checks for vulnerable versions of gems in Gemfile.lock
@@ -62,14 +62,18 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   # Brakeman is a static analysis tool which checks Ruby on Rails applications for security vulnerabilities
   gem 'brakeman'
+  # Testing
+  gem 'factory_bot'
+  gem 'listen', '~> 3.0.5'
+  # Spring speeds up development by keeping your application running in the
+  # background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  # Access an IRB console on exception pages or by using <%= console %> anywhere
+  # in the code.
+  gem 'web-console', '>= 3.3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
