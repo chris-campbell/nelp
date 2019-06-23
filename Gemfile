@@ -57,12 +57,15 @@ gem 'owlcarousel-rails'
 
 # Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger
+  # console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
-  # Brakeman is a static analysis tool which checks Ruby on Rails applications for security vulnerabilities
+  # Brakeman is a static analysis tool which checks Ruby on Rails applications
+  # for security vulnerabilities
   gem 'brakeman'
   # Testing
   gem 'factory_bot'
