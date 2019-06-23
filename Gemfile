@@ -55,6 +55,7 @@ gem 'lightbox2-rails'
 # Content carousel for mobile splash
 gem 'owlcarousel-rails'
 gem 'rails-controller-testing'
+gem 'rb-readline'
 
 # Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
