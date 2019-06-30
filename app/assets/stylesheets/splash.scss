@@ -1,11 +1,13 @@
 $form-label-color: #4a6577;
-$form-help-block: #f45758;
-$vibrant-red-background: #f45758;
-$form-font-color: #444;
+$vibrant-base-red: #f04c4e;
+$heading-dark-blue: #394e5d;
+$med-heading-border-bottom: #f09a9d;
+$white-font-color: #444;
 $grey-border: rgba(0, 0, 0, .15);
 $form-placeholder: #939393;
 $white-background-color: #fff;
 $transparent-outter-splash: rgba(255, 255, 255, 0.56);
+
 
 
 * {
@@ -15,7 +17,7 @@ $transparent-outter-splash: rgba(255, 255, 255, 0.56);
 }
 
 .navbar {
-  background-color: #F45758;
+  background-color: $vibrant-base-red;
 }
 
 .content {
@@ -45,19 +47,24 @@ $transparent-outter-splash: rgba(255, 255, 255, 0.56);
       text-decoration: none;
     }
     h2 {
-        font-size: 1.238em;
-        text-align: center;
-        margin: 20px 0px;
-        font-family: proxima-semibold;
-        color: #394e5d;
-        display: inline-block;
-        border-bottom: 3px solid #f09a9d;
-        padding-bottom: 13px;
+      border-bottom: 3px solid $med-heading-border-bottom;
+      font-size: 1.238em;
+      text-align: center;
+      margin: 20px 0px;
+      font-family: proxima-semibold;
+      color: $heading-dark-blue;
+      display: inline-block;
+      padding-bottom: 13px;
     }
     p {
-      font-size: 0.7em;
+      color: #5a5a5a;
       font-family: proxima-regular;
-      color: #f45758;
+      font-size: .7em;
+      padding: 0 52px;
+    }
+    .help-block {
+      color: $vibrant-base-red;
+      padding: 0px;
     }
   }
 }
@@ -67,7 +74,7 @@ $transparent-outter-splash: rgba(255, 255, 255, 0.56);
   text-align: center;
   width: 100%;
   .page-1 {
-     color: #4A6577;
+     color: #5a5a5a;
      width: 100%;
      .logo {
         margin: 0 auto;
@@ -85,13 +92,16 @@ $transparent-outter-splash: rgba(255, 255, 255, 0.56);
     width: 54% !important;
   }
   .sign-up-btn {
-    background-color: $vibrant-red-background;
+    background-color: $vibrant-base-red;
     border: 0;
     border-radius: 44px;
     color: #fff;
     font-size: 16px;
     margin-top: 15px;
     padding: 10px 40px;
+    a {
+      color: $white-background-color;
+    }
   }
   .owl-dot {
       position: relative;

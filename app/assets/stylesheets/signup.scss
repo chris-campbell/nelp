@@ -78,6 +78,7 @@ form input[type=text] {
   position: relative;
   top: 20px;
   width: 20% !important;
+  max-width: 104px;
 }
 
 ::placeholder {
@@ -85,4 +86,12 @@ form input[type=text] {
   color: $form-placeholder !important; // sass-lint:disable-line no-important
   font-size: .9rem !important;
   opacity: 1;
+}
+
+
+@media only screen and (min-width: 535px) {
+  .form-inner {
+    max-width: 535px;
+    margin: 0 auto;
+  }
 }

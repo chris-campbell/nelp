@@ -1,3 +1,40 @@
-// Place all the styles related to the places controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$form-label-color: #4a6577;
+$vibrant-base-red: #f04c4e;
+$heading-dark-blue: #394e5d;
+$med-heading-border-bottom: #f09a9d;
+$white-font-color: #444;
+$grey-border: rgba(0, 0, 0, .15);
+$form-placeholder: #939393;
+$white-background-color: #fff;
+$transparent-outter-splash: rgba(255, 255, 255, .56);
+
+.places-items {
+  background-color: #fff;
+  height: auto;
+  .place-item {
+    padding: 25px;
+    border-bottom: 1px solid #dedede;
+    .range {
+      color: green;
+    }
+    h3 {
+      font-size: 18px;
+      a {
+        color: $heading-dark-blue;
+      }
+    }
+    p {
+      font-size: 13px;
+      color: #313131;
+    }
+  }
+}
+
+.search-bar {
+
+  ul {
+    li {
+      display: inline;
+    }
+  }
+}

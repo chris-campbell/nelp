@@ -73,8 +73,8 @@ class PlacesController < ApplicationController
 
   helper_method :dollar_range
   def dollar_range(num)
-    ranges = { '1': '$', '2': '$$', '3': '$$$', '4': '$$$$'}
-    return ranges[num]
+    ranges = { '1' => '$', '2' => '$$', '3' => '$$$', '4' => '$$$$'}
+    ranges[num]
   end
 
   helper_method :format_date
