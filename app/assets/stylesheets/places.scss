@@ -12,13 +12,11 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
   background-color: #fff;
   height: auto;
   .place-item {
-    padding: 25px;
+//     padding: 25px 25px 0 25px;
     border-bottom: 1px solid #dedede;
-    .range {
-      color: green;
-    }
     h3 {
-      font-size: 18px;
+      font-size: 16px;
+      padding: 5px 0 17px 0;
       a {
         color: $heading-dark-blue;
       }
@@ -30,9 +28,49 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
   }
 }
 
+.place-inner {
+  padding: 20px 20px 0 20px;
+}
+
+.score-btn {
+  border: 1px solid #f04c4e;
+  padding: 5px;
+  background: #f04c4e;
+  border-radius: 2px;
+  margin-left: 10px;
+  color: #fff;
+}
+
+
+.place-status {
+  width: 100%;
+  padding-bottom: 12px;
+  .score {
+    float: right;
+    font-size: 14px;
+  }
+  .range {
+    color: green;
+  }
+}
+
+
+.recommend {
+  border-top: 1px solid #dedede;
+  border-bottom: 3px solid #c3c3c3;
+  padding: 10px 0 0 20px;
+  p {
+    position: relative;
+    top: 3px;
+  }
+}
+
+
 .search-bar {
 
   ul {
+    width: 80%;
+    margin: 0 auto;
     li {
       display: inline;
     }

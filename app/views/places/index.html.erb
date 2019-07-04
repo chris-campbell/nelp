@@ -1,4 +1,3 @@
-<div
 <div class='search-bar'>
   <ul>
     <li>Recent</li>
@@ -9,12 +8,40 @@
   <section class="places-items">
     <% @places.each_with_index do |place, index| %>
       <article class='place-item'>
-        <h3><%= (index + 1) %>. <%= link_to place.name, place_path(place.id) %></h3>
-        <p><%= rating_for place, 'overall', cancel_hint: 'Cancel this rating!' %></p>
-        <div class='images-section'></div>
-        <p><%= place.description %></p>
-        <p class='range'><%= dollar_range(place.range) %></p>
+        <div class='place-inner'>
+          <div class='place-name'>
+            <h3>
+              <%= (index + 1) %>. <%= link_to place.name, place_path(place.id) %>
+            </h3>
+
+            <div class="place-status">
+              <span class='score'>
+                Score: 57%
+              </span>
+              <span class='range'>
+                <%= dollar_range(place.range) %>
+              </span>
+            </div>
+          </div>
+          <!-- Image section -->
+          <div class='images-section'></div>
+          <p>
+            <%= place.description %>
+          </p>
+        </div>
+
+        <div class='recommend'>
+          <p>
+            <span>Would you recommend?</span>
+            <button class='score-btn'>
+              Yes
+            </button>
+            <button class='score-btn'>
+              No
+            </button>
+          </p>
+        </div>
       </article>
-    <% end %>
+      <% end %>
   </section>
 </section>

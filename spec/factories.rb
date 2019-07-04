@@ -1,4 +1,10 @@
 FactoryBot.define do
+  factory :tally do
+    tally_yes { "" }
+    tally_no { "" }
+    score { "" }
+  end
+
   factory :user do
     sequence :email do |n|
       "dummyEmail#{n}@yahoo.com"

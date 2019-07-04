@@ -21,4 +21,8 @@ class Place < ApplicationRecord
     scope :latest, -> { order(created_at: :desc) }
     scope :oldest, -> { order(created_at: :asc) }
 
+    def location_score
+
+    end
+
 end

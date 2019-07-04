@@ -7,8 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-30.times do |n|
+10.times do |n|
   Place.create!( name: "Yet another cool Place to checkout #{n}",
-                  description: "You have lived until you have seen this place",
-                  address: "389 E 37th Street, Brooklyn, NY" )
+                 description: "You have lived until you have seen this place",
+                 address: "389 E 37th Street, Brooklyn, NY",
+                 user_id: 1,
+                 latitude: 40.7843627,
+                 longitude: -73.9778376,
+                 range: 3
+    )
 end
