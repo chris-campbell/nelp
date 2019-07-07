@@ -3,9 +3,9 @@ class PlacesController < ApplicationController
 
   def index
     if params[:filter].nil?
-      return @place_list = Place.all
+      @place_list = Place.all
     else
-      return @place_list = Place.send(params[:filter].downcase)
+      @place_list = Place.send(params[:filter].downcase)
     end
     @places = Place.paginate(page: params[:page], per_page: 10)
   end
