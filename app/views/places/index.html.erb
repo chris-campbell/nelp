@@ -7,7 +7,7 @@
 <section class='content'>
   <section class="places-items">
     <% @places.each_with_index do |place, index| %>
-      <article class='place-item'>
+      <article class="place-item" data-place_id="<%= place.id %>">
         <div class='place-inner'>
           <div class='place-name'>
             <h3>
@@ -15,9 +15,8 @@
             </h3>
 
             <div class="place-status">
-              <span class='score'>
-                Score: 57%
-              </span>
+              <%= render partial: 'shared/score', locals: {place: place} %>
+                  
               <span class='range'>
                 <%= dollar_range(place.range) %>
               </span>
@@ -33,12 +32,8 @@
         <div class='recommend'>
           <p>
             <span>Would you recommend?</span>
-            <button class='score-btn'>
-              Yes
-            </button>
-            <button class='score-btn'>
-              No
-            </button>
+            <button class='score-btn-yes'>Yes</button>
+            <button class='score-btn-no'>No</button>
           </p>
         </div>
       </article>
