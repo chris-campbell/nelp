@@ -13,10 +13,8 @@
             <h3>
               <%= (index + 1) %>. <%= link_to place.name, place_path(place.id) %>
             </h3>
-
             <div class="place-status">
               <%= render partial: 'shared/score', locals: {place: place} %>
-
               <span class='range'>
                 <%= dollar_range(place.range) %>
               </span>

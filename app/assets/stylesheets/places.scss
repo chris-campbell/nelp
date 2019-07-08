@@ -47,10 +47,14 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
   padding-bottom: 12px;
   .score {
     float: right;
-    font-size: 14px;
-  }
+    font-size: 15px;
+    padding: 1px 10px;
+    background: #a6f7b7;
+    border: 1.5px solid #75b585;
+    color: #36944e;
+    border-radius: 4px;  }
   .range {
-    color: green;
+    color: #36944e;
   }
 }
 
