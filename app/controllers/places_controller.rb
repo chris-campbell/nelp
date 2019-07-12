@@ -61,8 +61,10 @@ class PlacesController < ApplicationController
     elsif params[:user_response] == 'no'
       @place.tally_down
     end
-    ActionCable.server.broadcast 'tally_channel',
-                                 content: @place.tally.percent
+
+    ActionCable.server.broadcast "tally_channel_#{@place.id}",
+                                 content: @place.tally.percent,
+                                 place_id: @place.id
   end
 
   private

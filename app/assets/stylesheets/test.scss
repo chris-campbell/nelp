@@ -1,0 +1,35 @@
+// .img-hut {
+//   float: left;
+// }
+//
+// .place-inner {
+//   float: right;
+// }
+
+// .recommend {
+//   float: right;
+// }
+
+.place-inner {
+  padding: 24px;
+  display: flex;
+  justify-content: flex-start;
+  .img-hut {
+    display: flex;
+    justify-content: flex-start;
+    .img-main {
+      height: 100px;
+      width: 100px;
+      /* padding-right: 10px; */
+      max-height: 155px;
+      /* margin-right: 10px; */
+      /* max-width: 130px; */
+      border-radius: 5px;
+      box-sizing: border-box;
+      }
+    }
+  }
+
+  .place-name {
+    margin-left: 18px;
+  }

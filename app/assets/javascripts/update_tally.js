@@ -1,8 +1,7 @@
 $(function() {
-  let placeID = $('.place-item').data('place_id');
-
   $('.score-btn-yes').click(function() {
     if ($('.score-btn-yes')[0].innerText === 'Yes') {
+      let placeID = $(this).attr('data-place-id');
       $.ajax({
         url: '/tally',
         type: 'post',
@@ -35,26 +34,26 @@ $(function() {
 
 
 
-
-
-    $(document).scroll(function () {
-        const element = $('.buffer');
-        var documentCurrentPos = $(this).scrollTop();
-        var position = element.position();
-        var elementPos = element.scrollTop = (position.top - 30);
-
-        // Toggle logic for Nav/Relevance
-        if (documentCurrentPos > elementPos) {
-            if ($('.relevance').css('display') == 'none') {
-                $('.navbar').toggle(100);
-                $('.relevance').toggle();
-                $('.social').toggle();
-            }
-        } else if (documentCurrentPos < elementPos) {
-             if ($('.relevance').css('display') == 'block') {
-                $('.navbar').toggle(100);
-                $('.relevance').toggle();
-                $('.social').toggle();
-            }
-        }
-    });
+    //
+    //
+    // $(document).scroll(function () {
+    //     const element = $('.buffer');
+    //     var documentCurrentPos = $(this).scrollTop();
+    //     var position = element.position();
+    //     var elementPos = element.scrollTop = (position.top - 30);
+    //
+    //     // Toggle logic for Nav/Relevance
+    //     if (documentCurrentPos > elementPos) {
+    //         if ($('.relevance').css('display') == 'none') {
+    //             $('.navbar').toggle(100);
+    //             $('.relevance').toggle();
+    //             $('.social').toggle();
+    //         }
+    //     } else if (documentCurrentPos < elementPos) {
+    //          if ($('.relevance').css('display') == 'block') {
+    //             $('.navbar').toggle(100);
+    //             $('.relevance').toggle();
+    //             $('.social').toggle();
+    //         }
+    //     }
+    // });

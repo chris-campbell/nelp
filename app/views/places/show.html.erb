@@ -3,9 +3,8 @@
     <div class='inner-information'>
       <h1 class='place-name'><%= @place.name %></h1>
       <span><%= @place.address %></span>
-      <%= rating_for @place, "custome_design" %>
       <h1 class='price-range'><%= dollar_range(@place.range) %></h1>
-      
+
       <br/>
       <p>
         <%= @place.description %>
@@ -27,7 +26,7 @@
     <%= render 'shared/film_roll' %>
   <!-- Places images -->
   <div class='clear'></div>
-  
+
   <!-- Comment Section -->
     <%= render 'shared/comment_section' %>
   <!-- Comment Section -->
@@ -53,7 +52,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Modal -->
   <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
