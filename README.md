@@ -32,4 +32,4 @@ a first date or you need a dentist, Nelp will be you pocket companion.
 
 This was a solo project where I decided to expand upon things I already know. As
 always a project is never really finished but it was my goal to implement core
-fundamental and deliver a reliable project.
+fundamentals and deliver a *clean, well-produced* project.
