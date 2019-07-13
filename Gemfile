@@ -46,14 +46,10 @@ gem 'figaro'
 gem 'carrierwave', '~> 1.0'
 # Configure fog upload for AWS
 gem 'fog-aws'
-# Add star rating functionality to application. Read more:
-gem 'ratyrate'
 # Neatly displays objects in console
 gem 'awesome_print', '~> 1.8'
 # Installs lightbox
 gem 'lightbox2-rails'
-# Content carousel for mobile splash
-gem 'owlcarousel-rails'
 gem 'rails-controller-testing'
 gem 'rb-readline'
 
