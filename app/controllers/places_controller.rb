@@ -62,7 +62,7 @@ class PlacesController < ApplicationController
       @place.tally_down
     end
 
-    ActionCable.server.broadcast "tally_channel_#{@place.id}",
+    ActionCable.server.broadcast "tally_channel_#{params[:place_id]}",
                                  content: @place.tally.percent,
                                  place_id: @place.id
   end

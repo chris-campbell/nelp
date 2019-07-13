@@ -1,4 +1,4 @@
-App.tally = App.cable.subscriptions.create { channel: 'TallyChannel', place_id:
+App.tally = App.cable.subscriptions.create( channel: 'TallyChannel', {
   connected() {},
 
 

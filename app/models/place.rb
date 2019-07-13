@@ -1,5 +1,4 @@
 class Place < ApplicationRecord
-    ratyrate_rateable 'overall'
 
     mount_uploader :picture, PictureUploader
 
