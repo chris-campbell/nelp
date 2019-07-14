@@ -13,6 +13,7 @@ $(function() {
 
   $('.score-btn-no').click(function() {
     if ($('.score-btn-no')[0].innerText === 'No') {
+      let placeID = $(this).attr('data-place-id');
       $.ajax({
         url: '/tally',
         type: 'post',

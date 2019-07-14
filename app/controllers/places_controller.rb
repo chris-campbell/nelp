@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, only: [ :new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: %I[new create edit update destroy]
 
   def index
     if params[:filter].nil?
@@ -62,9 +62,7 @@ class PlacesController < ApplicationController
       @place.tally_down
     end
 
-    ActionCable.server.broadcast "tally_channel_#{@place.id}",
-                                 content: @place.tally.percent,
-                                 place_id: @place.id
+    broadcast_to_tally(@place)
   end
 
   private
@@ -88,5 +86,12 @@ class PlacesController < ApplicationController
   def format_date(date)
     formatted = date.strftime('%b %e, %l:%M %p')
     formatted
+  end
+
+  helper_method :broadcast_to_tally
+  def broadcast_to_tally(place)
+    ActionCable.server.broadcast 'tally_channel',
+                                 content: place.tally.percent,
+                                 place_id: place.id
   end
 end

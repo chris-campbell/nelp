@@ -1,24 +1,35 @@
-# README
+# Nelp (the Yelp clone kinda..)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Nelp is a rails application designed to function similarly to Yelp. Users can
+search and find top user ranked places that meet their needs. whether it's for
+a first date or you need a dentist, Nelp will be you pocket companion.
 
-Things you may want to cover:
+### Technologies
 
-* Ruby version
+* Ruby (version 2.3.0p)
 
-* System dependencies
+* Ruby on Rails (version 5.0.7.2)
 
-* Configuration
+* Bootstrap (version 4.0.0.alpha6)
 
-* Database creation
+* JavaScript ES6
 
-* Database initialization
+* Jquery
 
-* How to run the test suite
+* Redis (version 3.3.1)
 
-* Services (job queues, cache servers, search engines, etc.)
+* Rubocop
 
-* Deployment instructions
+* Factory Bot (TDD)
+
+* Heroku
 
 * ...
+
+## Team
+
+#### One man band
+
+This was a solo project where I decided to expand upon things I already know. As
+always a project is never really finished but it was my goal to implement core
+fundamentals and deliver a *clean and well-produced* project.

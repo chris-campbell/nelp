@@ -1,4 +1,4 @@
-<div class='search-bar'>
+<div id='search-bar'>
   <ul>
     <li>Recent</li>
     <li>Oldest</li>
@@ -7,8 +7,7 @@
 <section class='content'>
   <section class="places-items">
     <% @places.each_with_index do |place, index| %>
-      <article class="place-item" >
-        <%= puts place.id %>
+      <article class="place-item">
         <div class='place-inner'>
           <div class='img-hut'>
             <% if place.photos.length > 0 %>
