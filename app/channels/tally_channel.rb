@@ -1,7 +1,6 @@
 class TallyChannel < ApplicationCable::Channel
   def subscribed
-    debugger
-    stream_from "tally_channel_#{params[:place_id]}"
+    stream_from "tally_channel"
   end
 
   def unsubscribed

@@ -35,6 +35,8 @@ class Place < ApplicationRecord
       tally.update_attributes(tally_no: new_tally, score: new_score, percent: percentage)
     end
 
+    
+
 
 
 end
