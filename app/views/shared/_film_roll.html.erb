@@ -11,7 +11,7 @@
 <%= photo.caption %>
 
 <%= link_to photo.picture.to_s, data: { lightbox: 'image1'} do %>
-<%= image_tag photo.picture %>
+<%= image_tag photo.picture.url %>
 <% end %>
 </div>
 <% end %>

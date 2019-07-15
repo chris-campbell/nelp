@@ -11,7 +11,7 @@
         <div class='place-inner'>
           <div class='img-hut'>
             <% if place.photos.length > 0 %>
-              <%= image_tag(place.photos[0].picture, class: 'img-main') %>
+              <%= image_tag(place.photos[0].picture.url, class: 'img-main') %>
             <% end %>
           </div>
           <div class='place-name'>
