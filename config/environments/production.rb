@@ -1,5 +1,5 @@
 Rails.application.configure do
-  
+
   ActionMailer::Base.smtp_settings = {
     address: 'smtp.sendgrid.net',
     port: '587',
@@ -10,7 +10,7 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
-  
+
   config.action_mailer.default_url_options = { host: 'https://nomster-chris-camp.herokuapp.com' }
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -36,7 +36,7 @@ Rails.application.configure do
   config.assets.js_compressor = Uglifier.new(harmony: true)
   # config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-
+  ENV['REDISTOGO_URL'] = "redis://redistogo:fa9a44e25c9788d4beb3476496adfb51@hammerjaw.redistogo.com:9904/"
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
 

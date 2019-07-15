@@ -1,4 +1,4 @@
 require "redis"
-redis_url = ENV.fetch("REDIS_URL")
 
-REDIS = Redis.new(url: redis_url)
+uri = URI.parse(ENV["REDISTOGO_URL"])
+REDIS = Redis.new(:url => uri)
