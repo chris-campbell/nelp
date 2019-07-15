@@ -53,7 +53,7 @@ gem 'lightbox2-rails'
 gem 'rails-controller-testing'
 gem 'rb-readline'
 gem 'owlcarousel-rails'
-gem 'redis', '~> 3.3', '>= 3.3.1'
+gem 'redis', '3.3.1'
 
 # Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
