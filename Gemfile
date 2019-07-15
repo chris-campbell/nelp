@@ -53,8 +53,8 @@ gem 'lightbox2-rails'
 gem 'rails-controller-testing'
 gem 'rb-readline'
 gem 'owlcarousel-rails'
-gem 'redis', '3.3.1'
-
+gem 'websocket-rails'
+gem 'redis', '3.2.0'
 # Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
