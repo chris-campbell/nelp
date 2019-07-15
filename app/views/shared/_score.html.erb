@@ -1,6 +1,6 @@
 <% if place.tally != nil %>
   <span class='score'>
       <%= puts "This is #{place.id}" %>
-      Score: <span class='score-value' data-score="<%= place.id %>"><%= place.tally.percent %></span>
+      <span class='score-value' data-score="<%= place.id %>"><i class="fa fa-poll-h"></i><%= place.tally.percent %></span>
   </span>
 <% end %>

@@ -15,4 +15,5 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require lightbox
+//= require owl.carousel
 //= require_tree .

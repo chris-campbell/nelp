@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, only: %I[new create edit update destroy]
+  before_action :authenticate_user!, only: %I[new create edit update destroy tally]
 
   def index
     if params[:filter].nil?
@@ -7,7 +7,8 @@ class PlacesController < ApplicationController
     else
       @place_list = Place.send(params[:filter].downcase)
     end
-    @places = Place.paginate(page: params[:page], per_page: 10)
+    # @places = Place.paginate(page: params[:page], per_page: 10)
+    @places = Place.all
   end
 
   def new

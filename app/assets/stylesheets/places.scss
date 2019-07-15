@@ -17,13 +17,16 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
     h3 {
       font-size: 20px;
       padding: 5px 0 17px 0;
+      font-family: 'proxima-semibold';
       a {
         color: $heading-dark-blue;
       }
     }
     p {
-      font-size: 15px;
+      font-size: 17px;
       color: #313131;
+      font-family: 'proxima-regular';
+      padding-top: 20px;
     }
   }
 }
@@ -47,14 +50,20 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
   padding-bottom: 12px;
   .score {
     float: right;
-    font-size: 15px;
+    font-size: 24px;
     padding: 1px 10px;
-    // background: #a6f7b7;
-    // border: 1.5px solid #75b585;
     color: #36944e;
-    border-radius: 4px;  }
+    border-radius: 4px;
+    font-family: 'proxima-semibold';
+    background: #bce6c0;
+    border: 0.7px solid #66d482;
+    padding: 1px 7px;
+  }
   .range {
     color: #36944e;
+    font-size: 21px;
+    position: relative;
+    top: 10px;
   }
 }
 
@@ -71,7 +80,6 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
 
 
 .search-bar {
-
   ul {
     width: 80%;
     margin: 0 auto;

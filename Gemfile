@@ -52,6 +52,7 @@ gem 'awesome_print', '~> 1.8'
 gem 'lightbox2-rails'
 gem 'rails-controller-testing'
 gem 'rb-readline'
+gem 'owlcarousel-rails'
 
 # Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
