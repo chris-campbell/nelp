@@ -1,6 +1,6 @@
 Rails.application.configure do
    config.action_mailer.delivery_method = :test
-  
+
   # config.action_mailer.smtp_settings = {
   #   address: "smtp.gmail.com",
   #   port: 587,
@@ -10,9 +10,9 @@ Rails.application.configure do
   #   password: ENV['GMAIL_PASSWORD'],
   #   enable_starttls_auto: true
   # }
-  
-  
-  
+
+
+  ENV['REDISTOGO_URL'] = "redis://redistogo:fa9a44e25c9788d4beb3476496adfb51@hammerjaw.redistogo.com:9904/"
   config.action_mailer.default_url_options = { host: 'localhost:3030' }
   # Settings specified here will take precedence over those in config/application.rb.
 
