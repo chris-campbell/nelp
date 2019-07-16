@@ -36,7 +36,9 @@ Rails.application.configure do
   config.assets.js_compressor = Uglifier.new(harmony: true)
   # config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-  
+  config.action_cable.url = 'wss://nelp-chris-camp.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = [
+    'https://nelp-chris-camp.herokuapp.com' ]
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
 
