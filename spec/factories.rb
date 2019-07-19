@@ -1,4 +1,8 @@
 FactoryBot.define do
+  factory :vote do
+    voter_id { "MyString" }
+  end
+
   factory :tally do
     tally_yes { "" }
     tally_no { "" }

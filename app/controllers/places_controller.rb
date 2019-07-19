@@ -2,12 +2,6 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: %I[new create edit update destroy tally]
 
   def index
-    if params[:filter].nil?
-      @place_list = Place.all
-    else
-      @place_list = Place.send(params[:filter].downcase)
-    end
-    # @places = Place.paginate(page: params[:page], per_page: 10)
     @places = Place.all
   end
 
@@ -58,11 +52,20 @@ class PlacesController < ApplicationController
   def tally
     @place = Place.find(params[:place_id].to_i)
     if params[:user_response] == 'yes'
-      @place.tally_up
+      if vote_exist?(@place, current_user.id)
+        puts "Aleady Voted!"
+      else
+        @place.tally_up
+        generate_vote(@place, current_user.id)
+      end
     elsif params[:user_response] == 'no'
-      @place.tally_down
+      if vote_exist?(@place, current_user.id)
+        puts "Already voted"
+      else
+        @place.tally_down
+        generate_vote(@place, current_user.id)
+      end
     end
-
     broadcast_to_tally(@place)
   end
 
@@ -70,6 +73,16 @@ class PlacesController < ApplicationController
 
   def place_params
     params.require(:place).permit(:name, :address, :description, :range)
+  end
+
+  helper_method :generate_vote
+  def generate_vote(place, user_id)
+    Vote.create!(voter_id: user_id, tally_id: place.tally.id)
+  end
+
+  helper_method :vote_exist?
+  def vote_exist?(place, user_id)
+    place.tally.votes.exists?(voter_id: user_id)
   end
 
   helper_method :score

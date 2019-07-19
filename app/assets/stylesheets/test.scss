@@ -12,8 +12,10 @@
 
 .place-inner {
   padding: 24px;
-  display: flex;
-  justify-content: flex-start;
+/* display: -webkit-box; */
+/* display: flex; */
+/* -webkit-box-pack: start; */
+/* justify-content: flex-start; */
   .img-hut {
     display: flex;
     justify-content: flex-start;
@@ -30,6 +32,29 @@
     }
   }
 
-  .place-name {
-    margin-left: 18px;
-  }
+.place-description {
+  margin-top: 20px;
+  font-family: proxima-regular;
+  font-size: 15px;
+}
+
+.place-image {
+  width: 20%;
+  height: 61px;
+  border-radius: 5px;
+}
+
+.image-box {
+  margin-top: 15px;
+}
+
+.score-value {
+  float: right;
+  font-family: 'proxima-semibold';
+  font-size: 23px;
+}
+
+.range {
+  color: green;
+  font-size: 20px;
+}

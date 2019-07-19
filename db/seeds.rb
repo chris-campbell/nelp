@@ -25,5 +25,6 @@ user = User.create!(
     )
     place = Place.last
     place.picture.store!(File.open(File.join(Rails.root, 'app/assets/images/space.png')))
-    Tally.create!(place_id: place.id)
+    tally = Tally.create!(place_id: place.id)
+    Vote.create!(voter_id: nil, tally_id: tally.id)
 end

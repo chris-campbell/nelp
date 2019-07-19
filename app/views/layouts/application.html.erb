@@ -6,21 +6,15 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    
-
-
   </head>
 
   <body>
     <%= render 'shared/nav' %>
-
-    <% if notice.present? %>
-      <p class="alert alert-info"><%= notice %></p>
+    <% flash.each do |name, msg| %>
+      <div class='alert alert-<%= name %>'>
+        <%= msg %>
+      </div>
     <% end %>
-    <% if alert.present? %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-
     <%= yield %>
 
   </body>
