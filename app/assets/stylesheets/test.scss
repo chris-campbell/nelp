@@ -34,14 +34,16 @@
 
 .place-description {
   margin-top: 20px;
-  font-family: proxima-regular;
-  font-size: 15px;
+  /* font-family: proxima-regular; */
+  font-size: 17px;
+  font-family: 'EB Garamond', serif;
 }
 
 .place-image {
   width: 20%;
   height: 61px;
   border-radius: 5px;
+  margin-left: 3px;
 }
 
 .image-box {
