@@ -106,6 +106,7 @@ class PlacesController < ApplicationController
   def broadcast_to_tally(place)
     ActionCable.server.broadcast 'tally_channel',
                                  content: place.tally.percent,
-                                 place_id: place.id
+                                 place_id: place.id,
+                                 score: place.tally.score
   end
 end

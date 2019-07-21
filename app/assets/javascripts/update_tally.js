@@ -1,25 +1,20 @@
 $(function() {
   $('.score-btn-yes').click(function() {
-    if ($('.score-btn-yes')[0].innerText === 'Yes') {
-      let placeID = $(this).attr('data-place-id');
+      let placeID = $(this).attr('data-place-id-yes');
       $.ajax({
         url: '/tally',
         type: 'post',
         data: { user_response: 'yes', place_id: placeID }
-      })
-    }
-
+      });
   });
 
   $('.score-btn-no').click(function() {
-    if ($('.score-btn-no')[0].innerText === 'No') {
-      let placeID = $(this).attr('data-place-id');
+      let placeID = $(this).attr('data-place-id-no');
       $.ajax({
         url: '/tally',
         type: 'post',
         data: { user_response: 'no', place_id: placeID }
-      })
-    }
+      });
   });
 
 

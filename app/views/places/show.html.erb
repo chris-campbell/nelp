@@ -3,23 +3,24 @@
     <div class='inner-information'>
       <h1 class='place-name'><%= @place.name %></h1>
       <span><%= @place.address %></span>
-      <h1 class='price-range'><%= dollar_range(@place.range) %></h1>
-
+      <span>
+        <h1 class='price-range'><%= dollar_range(@place.range) %></h1>
+      </span>
       <br/>
-      <p>
+      <div class='place-description'>
         <%= @place.description %>
-      </p>
+      </div>
       <div class="float-right">
         <% if current_user && current_user == @place.user %>
           <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
           <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
         <% end %>
       </div>
-    </div>
+
     <!-- Map display -->
       <%= render 'shared/map' %>
     <!-- Map display -->
-  </div>
+
   <!-- Places information -->
 
   <!-- Places images -->
@@ -30,7 +31,8 @@
   <!-- Comment Section -->
     <%= render 'shared/comment_section' %>
   <!-- Comment Section -->
-
+  </div>
+</div>
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
