@@ -14,7 +14,7 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
   .place-item {
     max-width: 650px;
 //     padding: 25px 25px 0 25px;
-    border-bottom: 1px solid #dedede;
+    border-bottom: 3px solid #bdbdbd;
     h3 {
       font-size: 24px;
       padding: 5px 0 17px 0;
@@ -27,7 +27,7 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
       font-size: 14px;
       color: #313131;
       font-family: 'proxima-regular';
-      padding-top: 20px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -37,12 +37,13 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
 }
 
 .score-btn-yes, .score-btn-no {
-  border: 1px solid #f04c4e;
   padding: 5px;
-  background: #f04c4e;
   border-radius: 2px;
-  margin-left: 10px;
+  margin-left: 19px;
+  margin-top: 10px;
   color: #fff;
+  text-align: center;
+  width: 52%;
 }
 
 
@@ -71,11 +72,14 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
 
 .recommend {
   border-top: 1px solid #dedede;
-  border-bottom: 3px solid #c3c3c3;
-  padding: 10px 0 0 20px;
+  /* padding: 10px 0 0 20px; */
+  width: 100%;
+  /* margin: 0 auto; */
+  display: flex;
+  text-align: center;
+  justify-content: center;
   p {
     position: relative;
-    // top: 7px;
   }
 }
 
@@ -97,4 +101,24 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
   margin-bottom: 3px;
   position: relative;
   bottom: 1px;
+}
+
+
+.total-score {
+  // float: right;
+  // font-size: 10px;
+  // position: relative;
+  // top: 8px;
+  // margin-left: 10px;
+  font-size: 10px;
+  position: relative;
+  bottom: 19px;
+}
+
+.score-box {
+  margin-bottom: 41px;
+}
+
+.total-vote-count {
+  width: 50%;
 }

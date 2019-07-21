@@ -12,8 +12,10 @@
           <h3>
             <%= link_to place.name, place_path(place.id) %>
           </h3>
-          <div>
-            <%= render partial: 'shared/score', locals: { place: place } %>
+          <div class='score-box'>
+            <span>
+              <%= render partial: 'shared/score', locals: { place: place } %>
+            </span>
             <span class='range'>
               <%= dollar_range(place.range) %>
             </span>
@@ -37,11 +39,14 @@
 
         <div class='recommend'>
           <p>
-            <span>Would you recommend?</span>
-            <button class='score-btn-yes' data-place-id="<%= place.id %>">Yes</button>
-            <button class='score-btn-no' data-place-id="<%= place.id %>">No</button>
+            <%= button_tag image_tag 'thumbs-up.png', class: 'score-btn-yes', data: {'place-id-yes' =>  place.id } %>
+            <%= button_tag image_tag 'thumbs-down.png', class: 'score-btn-no', data: {'place-id-no' => place.id } %>
           </p>
+          <!-- <div class='total-vote-count'>
+            <%= place.tally.score %>
+          </div> -->
         </div>
+
       </article>
       <% end %>
   </section>
