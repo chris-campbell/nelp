@@ -1,0 +1,1 @@
+$(function(){$(".score-btn-yes").click(function(){let t=$(this).attr("data-place-id-yes");$.ajax({url:"/tally",type:"post",data:{user_response:"yes",place_id:t}})}),$(".score-btn-no").click(function(){let t=$(this).attr("data-place-id-no");$.ajax({url:"/tally",type:"post",data:{user_response:"no",place_id:t}})})});

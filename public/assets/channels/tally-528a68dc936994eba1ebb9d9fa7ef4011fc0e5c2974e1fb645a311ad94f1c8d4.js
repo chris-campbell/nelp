@@ -1,0 +1,1 @@
+App.tally=App.cable.subscriptions.create("TallyChannel",{connected(){},disconnected(){},received(e){if(e){const c=e.place_id;let a=$(".score-value[data-score="+c+"]");$(a[0]).replaceWith("<span class='score-value' data-score='"+c+"'>"+e.content+"%<br><span class='total-score'>Vote count: "+e.score+"</span></span>")}}});
