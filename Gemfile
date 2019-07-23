@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # Easily position tooltips. Read more: https://popper.js.org/?ref=heydesigner
 gem 'popper_js', '~> 1.11.1'
 # Add bootstrap functionality
-gem 'bootstrap', '4.0.0.alpha6'
+gem 'bootstrap'
 # Add pageination functionality. Read more: https://github.com/mislav/will_paginate
 gem 'will_paginate', '>= 3.1'
 # Simplify Rails form. Read more: https://github.com/plataformatec/simple_form

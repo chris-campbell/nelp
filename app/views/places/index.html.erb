@@ -1,17 +1,9 @@
-<div id='search-bar'>
-  <ul>
-    <li>Recent</li>
-    <li>Oldest</li>
-  </ul>
-</div>
 <section class='content'>
   <section class="places-items">
     <% @places.each_with_index do |place, index| %>
       <article class="place-item">
         <div class='place-inner'>
-          <h3>
-            <%= link_to place.name, place_path(place.id) %>
-          </h3>
+          <h3><%= link_to place.name, place_path(place.id) %></h3>
           <div class='score-box'>
             <span>
               <%= render partial: 'shared/score', locals: { place: place } %>
@@ -42,11 +34,7 @@
             <%= button_tag image_tag 'thumbs-up.png', class: 'score-btn-yes', data: {'place-id-yes' =>  place.id } %>
             <%= button_tag image_tag 'thumbs-down.png', class: 'score-btn-no', data: {'place-id-no' => place.id } %>
           </p>
-          <!-- <div class='total-vote-count'>
-            <%= place.tally.score %>
-          </div> -->
         </div>
-
       </article>
       <% end %>
   </section>
