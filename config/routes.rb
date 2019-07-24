@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   resources :tallies
 
   devise_for :users
+
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
   root 'places#index'
   resources :places do
     resources :comments, :photos, only: :create
