@@ -17,8 +17,9 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
     border-bottom: 3px solid #bdbdbd;
     h3 {
       font-size: 24px;
-      padding: 5px 0 17px 0;
+      padding: 5px 0 27px 0;
       font-family: 'Oswald', sans-serif;
+      text-align: center;
       a {
         color: $heading-dark-blue;
       }
@@ -27,7 +28,6 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
       font-size: 14px;
       color: #313131;
       font-family: 'proxima-regular';
-      margin-bottom: 10px;
     }
   }
 }
@@ -44,6 +44,8 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
   color: #fff;
   text-align: center;
   width: 52%;
+  position: relative;
+  bottom: 7px;
 }
 
 
@@ -80,7 +82,17 @@ $transparent-outter-splash: rgba(255, 255, 255, .56);
   justify-content: center;
   p {
     position: relative;
+    width: 50%;
+    margin-bottom: 0 !important;
   }
+}
+
+.recommend p {
+  border-left: 1px solid lightgrey;
+}
+
+.recommend p:first-child {
+  border-left: none;
 }
 
 
