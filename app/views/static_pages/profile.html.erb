@@ -1,0 +1,22 @@
+<%= image_tag(@user.avatar.to_s) %>
+
+<%= form_for @user do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_area :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <%= f.submit 'Update', class: 'btn btn-primary' %>
+
+<% end %>

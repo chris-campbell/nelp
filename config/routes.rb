@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   get 'static_pages/splash'
+  get 'static_pages/profile'
 
-  post '/rate' => 'rater#create', :as => 'rate'
   get 'photos/create'
 
-  post 'test', to: 'places#test'
+
+  # post 'test', to: 'places#test'
 
   get 'latest', to: 'places#latest'
 
@@ -13,10 +14,13 @@ Rails.application.routes.draw do
 
   resources :tallies
 
+
+
   devise_for :users
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
+
   end
 
   root 'places#index'
@@ -24,7 +28,9 @@ Rails.application.routes.draw do
     resources :comments, :photos, only: :create
     # get '/tally', to: "places#all_tally"
   end
-  resources :users, only: :show
+  resources :users do
+    patch :avatars, only: :create
+  end
 
   mount ActionCable.server, at: '/cable'
 end
