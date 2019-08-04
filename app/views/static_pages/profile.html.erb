@@ -1,22 +1,24 @@
-<%= image_tag(@user.avatar.to_s) %>
+<section class='profile-info'>
+  <%= image_tag(@user.avatar.to_s, class: "profile-avatar") %>
 
-<%= form_for @user do |f| %>
+  <div class='user-details'>
+    <%= form_for @user do |f| %>
+      <div class="field">
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+        <%= f.text_field :name, placeholder: 'Name' %>
+      </div>
+
+      <div class="field">
+
+        <%= f.text_field :email, placeholder: 'example@domain.com' %>
+      </div>
+
+      <div class="field">
+        <%= f.file_field :avatar, class: 'avatar' %>
+      </div>
+
+      <%= f.submit 'Update', class: 'btn btn-primary' %>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_area :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
-  </div>
-
-  <%= f.submit 'Update', class: 'btn btn-primary' %>
-
-<% end %>
+</section>
