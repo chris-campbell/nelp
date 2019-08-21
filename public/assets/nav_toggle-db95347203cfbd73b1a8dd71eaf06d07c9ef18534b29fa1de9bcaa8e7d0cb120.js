@@ -1,0 +1,1 @@
+"use strict";$(document).scroll(function(){const e=$(".buffer");var l=$(this).scrollTop(),o=e.position(),c=e.scrollTop=o.top-30;l>c?"none"==$(".relevance").css("display")&&($(".navbar").toggle(100),$(".relevance").toggle(),$(".social").toggle()):l<c&&"block"==$(".relevance").css("display")&&($(".navbar").toggle(100),$(".relevance").toggle(),$(".social").toggle())});

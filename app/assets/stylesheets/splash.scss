@@ -1,0 +1,155 @@
+$form-label-color: #4a6577;
+$vibrant-base-red: #f04c4e;
+$heading-dark-blue: #394e5d;
+$med-heading-border-bottom: #f09a9d;
+$white-font-color: #444;
+$grey-border: rgba(0, 0, 0, .15);
+$form-placeholder: #939393;
+$white-background-color: #fff;
+$transparent-outter-splash: rgba(255, 255, 255, 0.56);
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: $vibrant-base-red;
+}
+
+.content {
+  height: auto;
+  max-width: 650px;
+  min-width: 358px;
+  margin: 0 auto;
+}
+
+.splash-content-outter {
+  background: $transparent-outter-splash;
+  border-radius: 16px;
+  display: block;
+  height: 501px;
+  margin: 0 auto;
+  position: relative;
+  top: 38px;
+  width: 90%;
+  .splash-content-inner {
+    background-color: $white-background-color;
+    border-radius: 7px;
+    bottom: 9px;
+    height: auto;
+    margin: 0 auto;
+    min-height: 517px;
+    position: relative;
+    width: 85%;
+    a {
+      color: #4a6576;
+      text-decoration: none;
+    }
+    h2 {
+      border-bottom: 3px solid $med-heading-border-bottom;
+      font-size: 1.238em;
+      text-align: center;
+      margin: 20px 0px;
+      font-family: proxima-semibold;
+      color: $heading-dark-blue;
+      display: inline-block;
+      padding-bottom: 13px;
+    }
+    p {
+      color: #5a5a5a;
+      font-family: proxima-regular;
+      font-size: .7em;
+      padding: 0 52px;
+    }
+    .help-block {
+      color: $vibrant-base-red;
+      padding: 0px;
+    }
+  }
+}
+
+.owl-carousel {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  .page-1 {
+     color: #5a5a5a;
+     width: 100%;
+     .logo {
+        margin: 0 auto;
+        width: 20% !important;
+        padding-top: 63px;
+     }
+  }
+}
+
+.page-2 {
+  width: 100%;
+  .park {
+    margin: 0 auto;
+    padding-top: 63px;
+    width: 54% !important;
+  }
+  .sign-up-btn {
+    background-color: $vibrant-base-red;
+    border: 0;
+    border-radius: 44px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 15px;
+    padding: 10px 40px;
+    a {
+      color: $white-background-color;
+    }
+  }
+  .owl-dot {
+      position: relative;
+      top: 10px;
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: #f09a9d;
+    }
+}
+
+@media only screen and (min-width: 401px) {
+    body {
+        background-color: #f5cf8e;
+    }
+
+    .page-2 .park {
+      margin: 0 auto;
+      padding-top: 63px;
+      width: 41% !important;
+    }
+
+    .owl-dot {
+        position: relative;
+        top: 10px;
+    }
+}
+
+@media only screen and (min-width: 961px) {
+    body {
+      background-color: #b2d6ff;
+    }
+
+    .owl-carousel .page-1 .logo {
+      margin: 0 auto;
+      width: 16% !important;
+      padding-top: 63px;
+    }
+
+    .page-2 .park {
+      margin: 0 auto;
+      padding-top: 63px;
+      width: 41% !important;
+    }
+}

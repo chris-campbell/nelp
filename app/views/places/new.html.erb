@@ -1,0 +1,20 @@
+<div class='content'>
+  <div class='search-bar'></div>
+  <div class='new-place'>
+    <h3>Add New Place</h3>
+      <%= simple_form_for @place do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <div class='price-range'>
+          <span class='price-text'>Price range: </span>
+          <span class='price-range-sym'><%= f.radio_button(:range, "1") %> $</span>
+          <span class='price-range-sym'><%= f.radio_button(:range, "2") %> $$</span>
+          <span class='price-range-sym'><%= f.radio_button(:range, "3") %> $$$</span>
+          <span class='price-range-sym'><%= f.radio_button(:range, "4") %> $$$$</span>
+        </div>
+        <%= f.input :description %>
+        <br />
+        <%= f.submit 'Add Place', class: 'add-place-btn btn btn-primary' %>
+      <% end %>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+$form-label-color: #4a6577;
+$form-help-block: #f45758;
+$vibrant-red-background: #f45758;
+$form-font-color: #444;
+$grey-border: rgba(0, 0, 0, .15);
+$form-placeholder: #939393;
+$white-background-color: #fff;
+
+
+
+.form-inner {
+  position: relative;
+  top: 2px;
+
+  .control-label {
+    color: $form-label-color;
+    font-family: 'proxima-regular';
+    font-size: 13px;
+    left: 9%;
+    position: relative;
+    top: 5px;
+
+    abbr {
+      display: none;
+    }
+  }
+}
+
+.help-block {
+  color: $form-help-block;
+  font-family: 'proxima-regular';
+  font-size: 10px;
+  left: 10%;
+  position: relative;
+  top: 15px;
+}
+
+.create-account-btn {
+  background-color: $vibrant-red-background;
+  border-color: $vibrant-red-background;
+  border-radius: 45px;
+  display: block;
+  font-family: 'proxima-regular';
+  margin: 52px auto 0;
+}
+
+.login-link {
+  color: $form-label-color;
+  display: block;
+  font-size: 13px;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.form-control {
+  background-clip: padding-box;
+  background-color: $white-background-color;
+  background-image: none;
+  border: 1px solid $grey-border;
+  border-radius: .25rem;
+  color: $form-font-color;
+  display: block;
+  font-size: .9rem;
+  line-height: 1.25;
+  margin: 0 auto -14px !important;
+  padding: .5rem .75rem;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  width: 84%;
+}
+
+form input[type=text] {
+  color: $form-font-color !important;
+}
+
+.logo-signup {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  width: 20% !important;
+  max-width: 104px;
+}
+
+::placeholder {
+  // * Chrome, Firefox, Opera, Safari 10.1+ *
+  color: $form-placeholder !important; // sass-lint:disable-line no-important
+  font-size: .9rem !important;
+  opacity: 1;
+}
+
+
+@media only screen and (min-width: 535px) {
+  .form-inner {
+    max-width: 535px;
+    margin: 0 auto;
+  }
+}

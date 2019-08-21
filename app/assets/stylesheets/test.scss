@@ -1,0 +1,55 @@
+.place-inner {
+  padding: 24px;
+}
+
+.image-box {
+  text-align: center;
+  .place-image {
+    border-radius: 5px;
+    height: 61px;
+    margin-left: 3px;
+    width: 20%;
+  }
+}
+
+.places-images {
+  margin-top: 10px;
+  h5 {
+    margin-bottom: 0px;
+    text-align: center;
+    color: #394e5d;
+  }
+  img {
+    width: 100%;
+    float: right;
+    height: 150px;
+    padding-left: 3px;
+    padding-top: 3px;
+  }
+}
+
+.score-box {
+  .score-value {
+    float: right;
+    font-family: 'proxima-semibold';
+    font-size: 19px;
+    text-align: center;
+    margin-right: 20%;
+  }
+
+  .range {
+    color: green;
+    font-family: 'proxima-semibold' !important;
+    font-size: 19px;
+    position: relative;
+    top: 8px;
+    margin-left: 20%;
+  }
+}
+
+.place-description {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}

@@ -1,0 +1,132 @@
+  <!-- Places information -->
+<div class="place-information">
+  <div class='inner-information'>
+    <h1 class='place-name'><%= @place.name %></h1>
+    <div class='score-box'>
+      <span>
+        <%= render partial: 'shared/score', locals: { place: @place } %>
+      </span>
+      <span class='range'>
+        <%= dollar_range(@place.range) %>
+      </span>
+    </div>
+    <p class='place-description'>
+      <%= @place.description %>
+    </p>
+    <div>
+      <% if current_user && current_user == @place.user %>
+        <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
+        <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
+      <% end %>
+    </div>
+  <!-- Places information -->
+
+  <!-- Places images -->
+  <div class='places-images'>
+    <div class='share'>
+      <h5 class='photo-heading'>Photos from Jake's Dilemma</h5>
+      <div class="btn-group add-photo-btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary text-center add-photo" data-toggle="modal" data-target="#myModal"><i class="add fa fa-plus-circle"></i><span class='add-text'>Add</span></button>
+      </div>
+    </div>
+    <div id="film_roll">
+    <% @place.photos.each_with_index do |photo, index| %>
+      <%= photo.caption %>
+      <%= link_to photo.picture.to_s, data: { lightbox: 'image1'} do %>
+        <%= image_tag photo.picture.url %>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+    <!-- Places images -->
+  </div>
+</div>
+
+<!-- Comment Section -->
+<div class="booyah-box-header comments">
+  <button type="button" class="write-review-btn btn btn-secondary text-center" data-toggle="modal" data-target="#reviewModal">
+    <i class="add fa fa-plus-circle"></i>
+    <span>Leave a comment</span>
+  </button>
+
+  <h5 class="review-heading"><%= @place.comments.length %> Comments</h5>
+
+  <div class='clear'></div>
+
+  <div class='row'>
+    <% @place.comments.each do |comment| %>
+      <div class="lone-review col-10 col-sm-10 offset-1" %>
+        <div>
+          <div class='review-text'>
+            <h6 class='author'>Jeff Taylor</h6>
+            <p class='user-comment'><%= comment.message %></p>
+            <p class='date'><%= time_ago_in_words(comment.created_at) %> ago</p>
+            <br>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<!-- Comment Section -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+            <%= f.input :caption %>
+            <%= f.input :picture %>
+            <%= f.submit "Add photo", class: 'btn btn-primary' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Write your review</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="modal-body">
+        <div class='form-outter'>
+        <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
+          <div class='review-box'>
+            <div class="review-input">
+            <%= f.input :message, id: "review-text", placeholder: 'Add review...' %>
+              <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
+            </div>
+            <div class="review-submit">
+              <%= f.submit "Post", class: 'btn btn-primary review-btn' %>
+            </div>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Modal -->
+
+  <script>
+$(function() {
+  fr = new FilmRoll({
+    container: '#film_roll',
+    height: 330
+  });
+});
+</script>

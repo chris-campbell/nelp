@@ -1,0 +1,46 @@
+<div class='content'>
+  <div class='splash-content-outter'>
+    <div class='splash-content-inner'>
+      <div class="owl-carousel owl-theme">
+        <div class='page-1'>
+          <%= image_tag('logo', class: 'logo') %>
+          <h2>Join Our Community</h2>
+          <p>
+            Date night just got much easier, with Nelp finding that spot where spark fly is just a few clicks away.
+          </p>
+          <p class='draw-in'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at enim eu mauris aliquet hendrerit.
+          </p>
+        </div>
+        <div class='page-2'>
+          <%= image_tag('park', class: 'park') %>
+          <h2>Private Getaways</h2>
+          <p class='draw-in'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at enim eu mauris aliquet hendrerit.
+          </p>
+
+          <button type="button" class="sign-up-btn btn btn-primary btn-sm"><%= link_to 'Sign up', new_user_registration_path %></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(".owl-carousel").owlCarousel({
+    items: 2,
+    loop: false,
+    center: true,
+    margin: 10,
+    responsiveClass: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      1240: {
+        items: 2
+      }
+    }
+  });
+</script>

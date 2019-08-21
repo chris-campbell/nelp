@@ -1,0 +1,25 @@
+<div class='content'>
+  <div class='splash-content-outter'>
+      <div class='splash-content-inner'>
+        <%= image_tag('logo', class: 'logo-signup') %>
+        <div class='form-inner'>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+        
+          <div class="form-inputs">
+            <%= f.input :name, required: true, placeholder: 'John Smith', autofocus: true %>
+            <%= f.input :email, required: true, placeholder: 'example@domain.com' %>
+            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+            <%= f.input :password_confirmation, required: true %>
+          </div>
+        
+          <div class="form-actions">
+            <%= f.button :submit, "Create Account", class: 'create-account-btn btn btn-primary' %>
+          </div>
+          <% end %>
+          
+          <%= render "devise/shared/links" %>
+        </div>
+    </div>
+  </div>
+</div>
