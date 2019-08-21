@@ -12,7 +12,11 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
+<<<<<<< HEAD
 gem 'sass-rails'
+=======
+gem 'sass-rails', '~> 5.0'
+>>>>>>> bbdd858212d0337f0d5c5fa08e5c0da9c6cd9b82
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -27,7 +31,11 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Easily position tooltips. Read more: https://popper.js.org/?ref=heydesigner
+<<<<<<< HEAD
 gem 'popper_js'
+=======
+gem 'popper_js', '~> 1.11.1'
+>>>>>>> bbdd858212d0337f0d5c5fa08e5c0da9c6cd9b82
 # Add bootstrap functionality
 gem 'bootstrap'
 # Add pageination functionality. Read more: https://github.com/mislav/will_paginate
@@ -55,8 +63,11 @@ gem 'rb-readline'
 gem 'owlcarousel-rails'
 gem 'websocket-rails'
 gem 'redis','3.3.1'
+<<<<<<< HEAD
 gem 'nokogiri', '1.10.4'
 gem 'omniauth-facebook'
+=======
+>>>>>>> bbdd858212d0337f0d5c5fa08e5c0da9c6cd9b82
 # Checks for vulnerable versions of gems in Gemfile.lock
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger

@@ -4,11 +4,15 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+<<<<<<< HEAD
   devise :omniauthable, :omniauth_providers => [:facebook]
+=======
+>>>>>>> bbdd858212d0337f0d5c5fa08e5c0da9c6cd9b82
 
   has_many :places, dependent: :destroy
   has_many :comments, dependent: :destroy
 
+<<<<<<< HEAD
 
   def self.new_with_session(params, session)
   super.tap do |user|
@@ -26,4 +30,6 @@ end
       user.avatar = auth.info.image # assuming the user model has an image
     end
   end
+=======
+>>>>>>> bbdd858212d0337f0d5c5fa08e5c0da9c6cd9b82
 end
